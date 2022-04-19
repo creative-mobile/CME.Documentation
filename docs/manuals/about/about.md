@@ -1,5 +1,0 @@
-# About CME
-
-## Contacts
-
-## Team
