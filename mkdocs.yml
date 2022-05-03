@@ -1,8 +1,15 @@
 site_name: Creative Mobile Elements
 nav:
   - "User Guide":
-    - "What is CME.CloudPurchase?": index.md
+    - "What is CME CloudPurchase?": index.md
     - "Getting Started": user_guide/getting_started.md
+    - "Working with Environments": user_guide/working_with_environments.md
+    - "Monitoring CME CloudPurchase": user_guide/monitoring.md
+    - "Developer Guide":
+      - "Making Validation Requests": user_guide/making_validation_requests.md
+      - "Extending CME CloudPurchase": user_guide/extending.md
+  - "API Reference":
+    - api_reference/namespaces.md
 theme:
   name: material
   features:
