@@ -3,11 +3,11 @@ nav:
   - "User Guide":
     - "What is CME CloudPurchase?": index.md
     - "Getting Started": user_guide/getting_started.md
-    - "Working with Environments": user_guide/working_with_environments.md
-    - "Monitoring CME CloudPurchase": user_guide/monitoring.md
+    - "Managing Cloud Environments": user_guide/managing_cloud_environments.md
+    - "Usage Statistics & Monitoring": user_guide/usage_statistics.md
     - "Developer Guide":
       - "Making Validation Requests": user_guide/making_validation_requests.md
-      - "Extending CME CloudPurchase": user_guide/extending.md
+      - "Extending a Cloud Solution": user_guide/extending_a_cloud_solution.md
   - "API Reference":
     - api_reference/namespaces.md
 theme:
