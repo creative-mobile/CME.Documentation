@@ -1,16 +1,22 @@
 # Getting Started with CME CloudPurchase
 
-Установка CME CloudPurchase состоит из X шагов.
+Установка CME CloudPurchase довольно проса и состоит из следующих шагов.
 
 ## <a id="install"></a> Install the Unity plugin
 
-// Скачай с asset store
+Актуальная версия CME CloudPurchase находится в [Unity Asset Store](ссылка на платну версию), при желании можно воспользоваться [пробной версией](ссылка на бесплатную версию).
+
+Хороший мануал по установки unity плагинов есть на [сайте](https://docs.unity3d.com/Manual/AssetPackagesPurchase.html) официальной документации Unity.
 
 ## <a id="aws-credentials"></a> Get your AWS security credentials
 
-Если нет аккаунта, хлебни лиха — https://aws.amazon.com/ru/premiumsupport/knowledge-center/create-and-activate-aws-account/
+Если у вас еще нету аккаунта в AWS, то рекомендуем выполнить шаги [официального руководства](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
 
-To generate security credentials
+В случае, если аккаунт уже есть то можно переходить к.
+
+### Generating security credentials
+
+// гифки по мотивам:
 
 In the IAM console, open the Access Management, Users page and select the user that you want to generate credentials for.
 
