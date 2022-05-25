@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.120efc48.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.9647289d.min.css">
         
           
           
@@ -365,20 +365,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    Клиентский компонент
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    Расширение редактора
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -388,26 +374,6 @@
   <a href="#cme-cloudpurchase-costs" class="md-nav__link">
      CME CloudPurchase costs
   </a>
-  
-    <nav class="md-nav" aria-label=" CME CloudPurchase costs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#free-usage" class="md-nav__link">
-    Free Usage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#professional-usage" class="md-nav__link">
-    Professional Usage
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -682,20 +648,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    Клиентский компонент
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    Расширение редактора
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -705,26 +657,6 @@
   <a href="#cme-cloudpurchase-costs" class="md-nav__link">
      CME CloudPurchase costs
   </a>
-  
-    <nav class="md-nav" aria-label=" CME CloudPurchase costs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#free-usage" class="md-nav__link">
-    Free Usage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#professional-usage" class="md-nav__link">
-    Professional Usage
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -746,10 +678,10 @@
 <h2 id="overview">Overview</h2>
 <p>CME CloudPurchase это расширение Unity для серверной обработки внутриигровых платежей в вашей собственной облачной среде AWS.</p>
 <p>Расширение состоит из двух частей:</p>
-<ul>
+<ol>
 <li>Готовый к использованию C# код клиентской и серверной обработки платежей;</li>
-<li>Инструменты развертывания облачного приложения удобно встроенные в Unity Editor.</li>
-</ul>
+<li>Инструменты развертывания облачного приложения встроенные в Unity Editor.</li>
+</ol>
 <p><strong>Topics</strong></p>
 <ul>
 <li><a href="#features">CME CloudPurchase features</a></li>
@@ -775,15 +707,16 @@
 <p>Подробнее о возможностях к модификации, смотрите <a href="user_guide/extending_a_cloud_solution/">Extending a Cloud Solution</a> в руководстве разработчика.</p>
 <h2 id="how-cme-cloudpurchase-works"><a id="how-it-works"></a> How CME CloudPurchase works</h2>
 <p>Обработка каждого платежа в рамках сценария совершения покупки происходит за счет вызова к <strong>облачному приложению</strong> развернутого в выбранной <strong>среде</strong>.</p>
-<p>Вызов производиться с использованием <strong>клиентского компонента</strong> встраиваемого в игру.</p>
-<p>Выбор средой производится благодаря <strong>расширению редактора</strong> в специальном окне перед сборкой или запуском приложения.</p>
+<p>Вызов производиться с использованием <a href="api_reference/namespaces/">клиентской библиотеки</a> встраиваемой в игру.</p>
+<p>Выбор среды производится в специальном окне расширения Unity Editor перед сборкой или запуском приложения.</p>
 <h3 id="_6">Облачное приложение</h3>
+<p>Облачное приложение это набор связанных компонетов AWS минимально необходимых для проверки, хранения и наблюдения истории платежей.</p>
 <h3 id="_7">Среда развертывания</h3>
-<h3 id="_8">Клиентский компонент</h3>
-<h3 id="_9">Расширение редактора</h3>
+<p>Приложение разделено на именованные среды для возможности безопасного тестирования конфигураций и расширений облачного приложения.</p>
 <h2 id="cme-cloudpurchase-costs"><a id="costs"></a> CME CloudPurchase costs</h2>
-<h3 id="free-usage">Free Usage</h3>
-<h3 id="professional-usage">Professional Usage</h3>
+<p>CME CloudPurchase очень экономно использует ресурсы AWS и <a href="https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267">попадает с большым запасом</a> в ограничения AWS Free Tier.</p>
+<p>Поэтому при использовании <a href="Unity Asset Store">триальной версии</a> CME CloudPurchase будет для вас полностью бесплатен.</p>
+<p>При невозможности использовать AWS Free Tier стоимсть эксплуалтации <a href="https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267">остается крайне эффективной</a>. </p>
 
               
             </article>
@@ -842,7 +775,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "toc.follow"], "search": "assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="assets/javascripts/bundle.6e54b5cd.min.js"></script>
       
     
   </body>
