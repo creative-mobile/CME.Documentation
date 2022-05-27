@@ -585,17 +585,18 @@
 <p>Хороший мануал по установки unity плагинов есть на <a href="https://docs.unity3d.com/Manual/AssetPackagesPurchase.html">сайте</a> официальной документации Unity.</p>
 <h2 id="get-your-aws-security-credentials"><a id="aws-credentials"></a> Get your AWS security credentials</h2>
 <p>Если у вас еще нету аккаунта в AWS, то рекомендуем выполнить шаги <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/">официального руководства</a>.</p>
-<p>В случае, если аккаунт уже есть то можно переходить к.</p>
+<p>В случае, если аккаунт уже есть то можно переходить к получению ключей доступа.</p>
 <h3 id="generating-security-credentials">Generating security credentials</h3>
-<p>// гифки по мотивам:</p>
-<p>In the IAM console, open the Access Management, Users page and select the user that you want to generate credentials for.</p>
-<p>On the user detail page, open the Security credentials tab.</p>
-<p>Go to the Access keys section and choose Create access key.</p>
-<p>When the access key is generated, you can view both the access key ID and the secret access key, which together are the access key. Copy both of the access key values, or download them as a .CSV file to a local drive.</p>
+<p>Для получения ключей доступа перейите в раздел <a href="https://console.aws.amazon.com/iamv2/home">Identity and Access Management</a> и выполните следующие действия:</p>
+<p><img alt="" src="../../assets/iam.gif" /></p>
 <h2 id="make-your-first-deployment"><a id="deployment"></a> Make your first deployment</h2>
-<p>// Гифка c развертыванием</p>
-<p>// Гифка с проверкой</p>
+<p>Теперь вы готовы развернуть свое первое CME CloudPurchase приложения, для этого откройте Unity Editor преокт с установленным плагинов и выполните следующие действия:</p>
+<p><img alt="" src="../../assets/edit%20profile%20and%20deploy.gif" /></p>
 <h2 id="configure-stores-integrations"><a id="stores"></a> Configure stores integrations</h2>
+<p>Без конфигурации ключей доступа к Google Developer Console нет возможности проверять патежи в Google Play Store, поэтому проверка может выдавать ошибку:</p>
+<p><img alt="" src="скриншит" /></p>
+<p>Для получения этих ключей необходимо перейти в <a href="https://play.google.com/console/">Google Play Console</a> и выполните следующие действия:</p>
+<p>(несколько gif-ок)</p>
 <p>Collect your Google credentials
 Tip: If you see Google Play Console or Google Developer Console in your local language, add &amp;hl=en at the end of the URL (before any #...) to switch to English.</p>
 <p>Open the Google Play Console
