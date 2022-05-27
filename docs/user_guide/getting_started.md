@@ -12,27 +12,29 @@
 
 Если у вас еще нету аккаунта в AWS, то рекомендуем выполнить шаги [официального руководства](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
 
-В случае, если аккаунт уже есть то можно переходить к.
+В случае, если аккаунт уже есть то можно переходить к получению ключей доступа.
 
 ### Generating security credentials
 
-// гифки по мотивам:
+Для получения ключей доступа перейите в раздел [Identity and Access Management](https://console.aws.amazon.com/iamv2/home) и выполните следующие действия:
 
-In the IAM console, open the Access Management, Users page and select the user that you want to generate credentials for.
-
-On the user detail page, open the Security credentials tab.
-
-Go to the Access keys section and choose Create access key.
-
-When the access key is generated, you can view both the access key ID and the secret access key, which together are the access key. Copy both of the access key values, or download them as a .CSV file to a local drive.
+![](../assets/iam.gif)
 
 ## <a id="deployment"></a> Make your first deployment
 
-// Гифка c развертыванием
+Теперь вы готовы развернуть свое первое CME CloudPurchase приложения, для этого откройте Unity Editor преокт с установленным плагинов и выполните следующие действия:
 
-// Гифка с проверкой
+![](../assets/edit profile and deploy.gif)
 
 ## <a id="stores"></a> Configure stores integrations
+
+Без конфигурации ключей доступа к Google Developer Console нет возможности проверять патежи в Google Play Store, поэтому проверка может выдавать ошибку:
+
+![](скриншит)
+
+Для получения этих ключей необходимо перейти в [Google Play Console](https://play.google.com/console/) и выполните следующие действия:
+
+(несколько gif-ок)
 
 Collect your Google credentials
 Tip: If you see Google Play Console or Google Developer Console in your local language, add &hl=en at the end of the URL (before any #...) to switch to English.
