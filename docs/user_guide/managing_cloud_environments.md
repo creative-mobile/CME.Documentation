@@ -16,9 +16,9 @@
 
 ## Inspection
 
-### <a id="test-deployment"></a> Test Deployment
+### <a id="make-test-purchase"></a> Test Deployment
 
-Кнопка `Test Deployment` позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на [дашборде](#environment-dashboard).
+Кнопка `Make Test Purchase` позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на [дашборде](#environment-dashboard).
 
 ### <a id="environment-dashboard"></a> Environment Dashboard
 
