@@ -525,9 +525,39 @@
 
 
 <h1 id="usage-statistics-monitoring">Usage Statistics &amp; Monitoring</h1>
-<p>Базовое наблюдение платежей доступно с использованием возможностей AWS CloudWatch, а с помощью выгруженной в CSV истории можно проводить полнофункциональный анализ удобными вам инструментами.</p>
+<p>Базовый мониторинг платежей доступен с использованием возможностей AWS CloudWatch, а с помощью выгруженной в CSV истории можно проводить полнофункциональный анализ удобными вам инструментами.</p>
 <h2 id="environment-dashboard-overview"><a id="dashboard"></a> Environment dashboard overview</h2>
+<p>Для того, чтобы перейти к дашборду, нужно нажать кнопку <code>Open Environment Dashboard</code>. По умолчанию дашборд содержит разделы:</p>
+<ul>
+<li><code>Purchases Overview</code>. Показывает сумму платежей по дням. </li>
+<li><code>Usage Overview</code>. График отражает количество успешных платежей и платежей с ошибкой.</li>
+<li><code>Purchase Details</code>. Здесь можно подробнее изучить информацию о каждом конкретном платеже.</li>
+<li><code>Purchase Errors</code>. Детализация по ошибкам платежей.</li>
+</ul>
+<p>В правом верхнем углу находится элементы управления дашбордом. Здесь можно:</p>
+<ul>
+<li>
+<p>Изменить рассматриваемый период времени.
+<img alt="" src="../../assets/dashboard-time-control.jpg" /></p>
+</li>
+<li>
+<p>Изменить интервал обновления данных.
+ <img alt="" src="../../assets/dashboard-refresh-control.jpg" /></p>
+</li>
+<li>
+<p>Добавить виджеты к дашборду, изменить имя дашборда, удалить дашборд и т.д.</p>
+</li>
+</ul>
+<p>Подробнее о работе с дашбордами в CloudWatch можно узнать <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html">здесь</a>.</p>
 <h2 id="export-your-purchase-history"><a id="data-export"></a> Export your purchase history</h2>
+<p>В CloudWatch существует возможность экспортировать данные из виджета в <code>.csv</code> файл. Для того, чтобы это сделать нужно:</p>
+<ol>
+<li>Выбрать интересующий вас виджет. Нажать кнопку <code>View in CloudWatch Logs Insights</code>.</li>
+<li>Нажать кнопку <code>Run query</code>.</li>
+<li>Дождаться окончания загрузки.</li>
+<li>В меню <code>Export results</code> выбрать пункт <code>Download table (CSV)</code>.</li>
+</ol>
+<p><img alt="" src="../../assets/export-csv.gif" /></p>
 
               
             </article>
