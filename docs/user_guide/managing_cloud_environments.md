@@ -22,13 +22,7 @@
 
 ### <a id="environment-dashboard"></a> Environment Dashboard
 
-Кнопка `Open Environment Dashboard` открывает в браузере дашборд в Amazon CloudWatch, на котором собрана информация о платежах на выбранном окружении. По умолчанию дашборд содержит разделы:
-
- * `Purchases Overview`. Показывает сумму платежей по дням.
- * `Usage Overview`. График отражает количество успешных платежей и платежей с ошибкой.
- * `Purchase Details`. Здесь можно подробнее изучить информацию о каждом конкретном платеже.
- * `Purchase Errors`. Детализация по ошибкам платежей.
-
+Кнопка `Open Environment Dashboard` открывает в браузере дашборд в Amazon CloudWatch, на котором собрана информация о платежах на выбранном окружении.
 Подробнее о возможностях дашборда [здесь](usage_statistics.md).
 
 ## Configuration
