@@ -18,13 +18,13 @@
 
 Для получения ключей доступа перейите в раздел [Identity and Access Management](https://console.aws.amazon.com/iamv2/home) и выполните следующие действия:
 
-![](../assets/iam.gif)
+![](../assets/AWS%20first%20run3.gif)
 
 ## <a id="deployment"></a> Make your first deployment
 
 Теперь вы готовы развернуть свое первое CME CloudPurchase приложения, для этого откройте Unity Editor преокт с установленным плагинов и выполните следующие действия:
 
-![](../assets/edit profile and deploy.gif)
+![](../assets/unity%20first%20run3.gif)
 
 ## <a id="stores"></a> Configure stores integrations
 
@@ -34,12 +34,13 @@
 
 Для получения этих ключей необходимо перейти в [Google Play Console](https://play.google.com/console/) и выполните следующие действия:
 
-(несколько gif-ок)
 
-Collect your Google credentials
-Tip: If you see Google Play Console or Google Developer Console in your local language, add &hl=en at the end of the URL (before any #...) to switch to English.
+[//]: # (Collect your Google credentials)
+
+[//]: # (Tip: If you see Google Play Console or Google Developer Console in your local language, add &hl=en at the end of the URL &#40;before any #...&#41; to switch to English.)
 
 Open the Google Play Console
+![](../assets/google_1.gif)
 - Click Account Details, and note the Developer Account ID listed there
 - Click Setup → API access
 - Click the Create new service account button
@@ -49,11 +50,15 @@ Open the Google Play Console
 - Provide a Service account name and click Create
 - Click Select a role, then find and select Service Account User, and proceed
 - Click the Done button
+
+![](../assets/google_2.gif)
 - Click on the Actions vertical three-dot icon of the service account you just created
 - Select Manage keys on the menu
 - Click ADD KEY -> Create New Key
 - Make sure JSON is selected as the Key type, and click CREATE
 - Save the file on your computer when prompted and remember where it was saved to
+
+![](../assets/google_3.gif)
 - Return to the Google Play Console tab, and click DONE to close the dialog
 - Click on Grant Access for the newly added service account at the bottom of the screen (you may need to click Refresh service accounts before it shows up)
 - Choose the permissions you'd like this account to have. We recommend Admin (all permissions), but you may want to manually select all checkboxes and leave out some of the Releases permissions such as Release to production
