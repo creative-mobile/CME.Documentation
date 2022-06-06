@@ -1,6 +1,6 @@
 # Making Validation Requests
 
-Вызывать проверку платежа крайне просто.
+При установке нашего пакета в вашем Unity проекте появится файл `Assets/CME/Sample/CloudPurchaseSample.cs` в котором есть примеры использования `CloudPurchaseClient`.
 
 ## <a id="client"></a> Using CloudPurchaseClient
 Пример использования `CloudPurchaseClient` для валидации платежей:
@@ -46,6 +46,8 @@ public async Task Validate()
 ```
 
 ## <a id="unity-iap"></a> Within the Unity IAP IStoreListener
+
+Для того, чтобы использовать `CloudPurchaseClient` вместе с `Unity IAP IStoreListener` сначала нужно найти файл `Assets/CME/Sample/Extensions.cs` в Unity проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.
 
 Пример использования `CloudPurchaseClient` c `Unity IAP IStoreListener` для валидации платежей:
 
