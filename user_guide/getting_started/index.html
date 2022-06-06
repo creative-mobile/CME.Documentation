@@ -422,20 +422,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../extending_a_cloud_solution/" class="md-nav__link">
-        Extending a Cloud Solution
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -588,36 +574,29 @@
 <p>В случае, если аккаунт уже есть то можно переходить к получению ключей доступа.</p>
 <h3 id="generating-security-credentials">Generating security credentials</h3>
 <p>Для получения ключей доступа перейите в раздел <a href="https://console.aws.amazon.com/iamv2/home">Identity and Access Management</a> и выполните следующие действия:</p>
-<p><img alt="" src="../../assets/iam.gif" /></p>
+<p><img alt="" src="../../assets/AWS%20first%20run3.gif" /></p>
 <h2 id="make-your-first-deployment"><a id="deployment"></a> Make your first deployment</h2>
 <p>Теперь вы готовы развернуть свое первое CME CloudPurchase приложения, для этого откройте Unity Editor преокт с установленным плагинов и выполните следующие действия:</p>
-<p><img alt="" src="../../assets/edit%20profile%20and%20deploy.gif" /></p>
+<p><img alt="" src="../../assets/unity%20first%20run3.gif" /></p>
 <h2 id="configure-stores-integrations"><a id="stores"></a> Configure stores integrations</h2>
 <p>Без конфигурации ключей доступа к Google Developer Console нет возможности проверять патежи в Google Play Store, поэтому проверка может выдавать ошибку:</p>
-<p><img alt="" src="скриншит" /></p>
+<p><img alt="" src="../../assets/google-creds-error.jpg" /></p>
 <p>Для получения этих ключей необходимо перейти в <a href="https://play.google.com/console/">Google Play Console</a> и выполните следующие действия:</p>
-<p>(несколько gif-ок)</p>
-<p>Collect your Google credentials
-Tip: If you see Google Play Console or Google Developer Console in your local language, add &amp;hl=en at the end of the URL (before any #...) to switch to English.</p>
-<p>Open the Google Play Console
-- Click Account Details, and note the Developer Account ID listed there
-- Click Setup → API access
-- Click the Create new service account button
-- Follow the Google Cloud Platform link in the dialog, which opens a new tab/window:
-- Click the CREATE SERVICE ACCOUNT button at the top of the Google Cloud Platform Console
-- Verify that you are on the correct Google Cloud Platform Project by looking for the Developer Account ID from earlier within the light gray text in the second input, preceding .iam.gserviceaccount.com. If not, open the picker in the top navigation bar, and find the one with the ID that contains it.
-- Provide a Service account name and click Create
-- Click Select a role, then find and select Service Account User, and proceed
-- Click the Done button
-- Click on the Actions vertical three-dot icon of the service account you just created
-- Select Manage keys on the menu
-- Click ADD KEY -&gt; Create New Key
-- Make sure JSON is selected as the Key type, and click CREATE
-- Save the file on your computer when prompted and remember where it was saved to
-- Return to the Google Play Console tab, and click DONE to close the dialog
-- Click on Grant Access for the newly added service account at the bottom of the screen (you may need to click Refresh service accounts before it shows up)
-- Choose the permissions you'd like this account to have. We recommend Admin (all permissions), but you may want to manually select all checkboxes and leave out some of the Releases permissions such as Release to production
-- Click Invite user to finish</p>
+<ol>
+<li>
+<p>Создайте сервисный аккаунт.
+<img alt="" src="../../assets/google_1.gif" /></p>
+</li>
+<li>
+<p>Создайте новый приватный ключ.
+<img alt="" src="../../assets/google_2.gif" /></p>
+</li>
+<li>
+<p>Выдайте необходимые разрешения для аккаунта.
+<img alt="" src="../../assets/google_3.gif" /></p>
+</li>
+</ol>
+<p>Подробнее о процессе создания и настройки сервисного аккаунта можно узнать <a href="https://developers.google.com/workspace/guides/create-credentials#service-account">здесь</a></p>
 
               
             </article>

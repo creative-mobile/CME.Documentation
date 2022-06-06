@@ -397,20 +397,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../extending_a_cloud_solution/" class="md-nav__link">
-        Extending a Cloud Solution
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -527,11 +513,144 @@
 
 
 <h1 id="making-validation-requests">Making Validation Requests</h1>
-<p>Вызывать проверку платежа крайне просто.</p>
+<p>При установке нашего пакета в вашем Unity проекте появится файл <code>Assets/CME/Sample/CloudPurchaseSample.cs</code> в котором есть примеры использования <code>CloudPurchaseClient</code>.</p>
 <h2 id="using-cloudpurchaseclient"><a id="client"></a> Using CloudPurchaseClient</h2>
-<p>// Листинг разобранный по строкам с комментами в коде и разбором смысла</p>
+<p>Пример использования <code>CloudPurchaseClient</code> для валидации платежей:</p>
+<pre><code>public async Task Validate()
+{
+    // Create client for validation
+    using (var cloudPurchaseClient = new CloudPurchaseClient())
+    {
+        // Create validation request directly
+        var request = new ValidationRequest
+        {
+            Store = Store.GooglePlay,
+            PackageId = &quot;com.my.package.name&quot;,
+            ProductId = &quot;my.product1&quot;,
+            ReceiptData = &quot;Receipt data from store&quot;,
+            // Set UserId to investigate logs and solve possible user problems
+            UserId = &quot;Optional User ID in game&quot;,
+            // Set PriceUsdCents for analytics and revenue diagrams in dashboard
+            Price = 9.99,
+            Currency = &quot;USD&quot;,
+            PriceUsdCents = 999
+        };
+
+        var response = await cloudPurchaseClient.Validate(request);
+
+        if (response.Valid)
+        {
+            // All Good
+
+            if (response.PurchaseType != PurchaseType.Paid)
+            {
+                // This is not real pay, Tester etc
+            }
+        }
+        else
+        {
+            // See details in response.ErrorCode and response.ErrorMessage
+        }
+    }
+}
+</code></pre>
 <h2 id="within-the-unity-iap-istorelistener"><a id="unity-iap"></a> Within the Unity IAP IStoreListener</h2>
-<p>// Листинг встроеной асинхронной проверки для Unity IAP</p>
+<p>Для того, чтобы использовать <code>CloudPurchaseClient</code> вместе с <code>Unity IAP IStoreListener</code> сначала нужно найти файл <code>Assets/CME/Sample/Extensions.cs</code> в Unity проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.</p>
+<p>Пример использования <code>CloudPurchaseClient</code> c <code>Unity IAP IStoreListener</code> для валидации платежей:</p>
+<pre><code>public class PurchaseProcessor : MonoBehaviour, IStoreListener
+{
+    private IStoreController? _storeController;
+
+    public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
+    {
+        _storeController = controller;
+    }
+
+    public void OnInitializeFailed(InitializationFailureReason error)
+    {
+        // Process error
+    }
+
+    public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
+    {
+        // Validate purchase without awaiting method
+        ValidatePurchase(purchaseEvent.purchasedProduct);
+
+        // We are still waiting for purchase validation
+        return PurchaseProcessingResult.Pending;
+    }
+
+    public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
+    {
+        // Process error
+    }
+
+    private async Task ValidatePurchase(Product purchasedProduct)
+    {
+        try
+        {
+            using (var iapValidator = new CloudPurchaseClient())
+            {
+                var request = CreateValidationRequest(purchasedProduct);
+                var response = await iapValidator.Validate(request);
+
+                if (response.Valid)
+                {
+                    // All good
+
+                    if (response.PurchaseType != PurchaseType.Paid)
+                    {
+                        // This is not real pay, Tester etc
+                    }
+                }
+                else
+                {
+                    // See details in response.ErrorCode and response.ErrorMessage
+                }
+            }
+        }
+        finally
+        {
+            // Confirm
+            _storeController?.ConfirmPendingPurchase(purchasedProduct);
+        }
+    }
+
+    private ValidationRequest CreateValidationRequest(Product purchasedProduct)
+    {
+#if UNITY_ANDROID
+        // Create validator
+        var validator = new CrossPlatformValidator(
+            GooglePlayTangle.Data(),
+            AppleTangle.Data(),
+            UnityEngine.Application.identifier);
+
+        var result = validator.Validate(purchasedProduct.receipt);
+
+        foreach (var purchaseReceipt in result)
+        {
+            if (purchaseReceipt is GooglePlayReceipt googlePlayReceipt)
+            {
+                // Use extension method to create ValidationRequest from GooglePlayReceipt
+                return googlePlayReceipt.AsValidationRequest(); 
+            }
+        }
+#elif UNITY_IOS
+        // Create validator
+        var validator = new CrossPlatformValidator(
+            GooglePlayTangle.Data(),
+            AppleTangle.Data(),
+            UnityEngine.Application.identifier);
+
+        var result = validator.Validate(purchasedProduct.receipt);
+
+        // Use extension method to create ValidationRequest from Product
+        return purchasedProduct.AsAppleValidationRequest();
+#endif
+        throw new Exception(&quot;Can't create validation request!&quot;);
+    }
+}
+</code></pre>
 
               
             </article>
@@ -566,13 +685,13 @@
       
       
         
-        <a href="../extending_a_cloud_solution/" class="md-footer__link md-footer__link--next" aria-label="Next: Extending a Cloud Solution" rel="next">
+        <a href="../../api_reference/namespaces/" class="md-footer__link md-footer__link--next" aria-label="Next: Namespaces" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Extending a Cloud Solution
+              Namespaces
             </div>
           </div>
           <div class="md-footer__button md-icon">
