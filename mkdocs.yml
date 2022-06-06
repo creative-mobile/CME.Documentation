@@ -7,7 +7,6 @@ nav:
     - "Usage Statistics & Monitoring": user_guide/usage_statistics.md
     - "Developer Guide":
       - "Making Validation Requests": user_guide/making_validation_requests.md
-      - "Extending a Cloud Solution": user_guide/extending_a_cloud_solution.md
   - "API Reference":
     - api_reference/namespaces.md
 theme:
