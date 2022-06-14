@@ -18,29 +18,29 @@
 
 Для получения ключей доступа перейите в раздел [Identity and Access Management](https://console.aws.amazon.com/iamv2/home) и выполните следующие действия:
 
-![](../assets/AWS%20first%20run3.gif)
+![!](../assets/AWS%20first%20run3.gif)
 
 ## <a id="deployment"></a> Make your first deployment
 
 Теперь вы готовы развернуть свое первое CME CloudPurchase приложения, для этого откройте Unity Editor преокт с установленным плагинов и выполните следующие действия:
 
-![](../assets/unity%20first%20run3.gif)
+![!](../assets/unity%20first%20run3.gif)
 
 ## <a id="stores"></a> Configure stores integrations
 
 Без конфигурации ключей доступа к Google Developer Console нет возможности проверять патежи в Google Play Store, поэтому проверка может выдавать ошибку:
 
-![](../assets/google-creds-error.jpg)
+![!](../assets/google-creds-error.jpg)
 
 Для получения этих ключей необходимо перейти в [Google Play Console](https://play.google.com/console/) и выполните следующие действия:
 
 1. Создайте сервисный аккаунт.
-![](../assets/google_1.gif)
+![!](../assets/google_1.gif)
 
 2. Создайте новый приватный ключ.
-![](../assets/google_2.gif)
+![!](../assets/google_2.gif)
 
 3. Выдайте необходимые разрешения для аккаунта.
-![](../assets/google_3.gif)
+![!](../assets/google_3.gif)
 
 Подробнее о процессе создания и настройки сервисного аккаунта можно узнать [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account)

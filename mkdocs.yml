@@ -11,6 +11,7 @@ nav:
     - api_reference/API.md
 theme:
   name: material
+  custom_dir: theme/
   features:
     - navigation.instant
     - navigation.sections
@@ -23,3 +24,4 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - lightgallery
