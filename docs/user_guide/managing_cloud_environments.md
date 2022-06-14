@@ -4,7 +4,7 @@
 
 Чтобы открыть `Control Panel` нажмите `CME -> Cloud Purchase -> Control Panel`. После этого откроется окно Control Panel.
 
-![](../assets/open-control-panel.gif)
+![!](../assets/open-control-panel.gif)
 
 ### <a id="target-environment"></a> Target Environment
 

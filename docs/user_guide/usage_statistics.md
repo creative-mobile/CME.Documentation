@@ -14,10 +14,10 @@
  В правом верхнем углу находится элементы управления дашбордом. Здесь можно:
 
  * Изменить рассматриваемый период времени.
-![](../assets/dashboard-time-control.jpg)
+![!](../assets/dashboard-time-control.jpg)
 
  * Изменить интервал обновления данных.
- ![](../assets/dashboard-refresh-control.jpg)
+ ![!](../assets/dashboard-refresh-control.jpg)
 
  * Добавить виджеты к дашборду, изменить имя дашборда, удалить дашборд и т.д.
 
@@ -32,4 +32,4 @@
 3. Дождаться окончания загрузки.
 4. В меню `Export results` выбрать пункт `Download table (CSV)`.
 
-![](../assets/export-csv.gif)
+![!](../assets/export-csv.gif)
