@@ -520,143 +520,144 @@
 
 <h1 id="making-validation-requests">Making Validation Requests</h1>
 <p>При установке нашего пакета в вашем Unity проекте появится файл <code>Assets/CME/Sample/CloudPurchaseSample.cs</code> в котором есть примеры использования <code>CloudPurchaseClient</code>.</p>
+<p>Процесс проверки платежей с помощью <code>CME CloudPurchase</code> довольно прост. По-сути, все сводится к созданию инстанса <a href="../../api_reference/API/#T-CME-CloudPurchase-CloudPurchaseClient"><code>CloudPurchaseClient</code></a> и использованию его метода <a href="../../api_reference/API/#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-"><code>Validate</code></a>. Примеры использования можно видеть ниже.</p>
 <h2 id="using-cloudpurchaseclient"><a id="client"></a> Using CloudPurchaseClient</h2>
 <p>Пример использования <code>CloudPurchaseClient</code> для валидации платежей:</p>
-<pre><code>public async Task Validate()
-{
-    // Create client for validation
-    using (var cloudPurchaseClient = new CloudPurchaseClient())
-    {
-        // Create validation request directly
-        var request = new ValidationRequest
-        {
-            Store = Store.GooglePlay,
-            PackageId = &quot;com.my.package.name&quot;,
-            ProductId = &quot;my.product1&quot;,
-            ReceiptData = &quot;Receipt data from store&quot;,
-            // Set UserId to investigate logs and solve possible user problems
-            UserId = &quot;Optional User ID in game&quot;,
-            // Set PriceUsdCents for analytics and revenue diagrams in dashboard
-            Price = 9.99,
-            Currency = &quot;USD&quot;,
-            PriceUsdCents = 999
-        };
-
-        var response = await cloudPurchaseClient.Validate(request);
-
-        if (response.Valid)
-        {
-            // All Good
-
-            if (response.PurchaseType != PurchaseType.Paid)
-            {
-                // This is not real pay, Tester etc
-            }
-        }
-        else
-        {
-            // See details in response.ErrorCode and response.ErrorMessage
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">Validate</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">cloudPurchaseClient</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CloudPurchaseClient</span><span class="p">())</span><span class="w"> </span><span class="c1">// (1)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ValidationRequest</span><span class="w"> </span><span class="c1">// (2)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="n">Store</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Store</span><span class="p">.</span><span class="n">GooglePlay</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="n">PackageId</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;com.my.package.name&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="n">ProductId</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;my.product1&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="n">ReceiptData</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Receipt data from store&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="n">UserId</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Optional User ID in game&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// (3)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="n">Price</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">9.99</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="n">Currency</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="n">PriceUsdCents</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">999</span><span class="w"> </span><span class="c1">// (4)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">cloudPurchaseClient</span><span class="p">.</span><span class="n">Validate</span><span class="p">(</span><span class="n">request</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">Valid</span><span class="p">)</span><span class="w"> </span><span class="c1">// (5)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">PurchaseType</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">PurchaseType</span><span class="p">.</span><span class="n">Paid</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">                </span><span class="c1">// This is not real pay, Tester etc</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="k">else</span><span class="w"></span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="c1">// See details in response.ErrorCode and response.ErrorMessage</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>Create <code>CloudPurchaseClient</code> instance for validation</li>
+<li>Create validation request directly</li>
+<li>Set <code>UserId</code> to investigate logs and solve possible user problems. <strong>Warning:</strong> this is personal data, see details <a href="../usage_statistics/#sensetive-data">here</a>.</li>
+<li>Set <code>PriceUsdCents</code> for analytics and revenue diagrams in <a href="../usage_statistics/">dashboard</a>.</li>
+<li>It means that purchase is good.</li>
+</ol>
 <h2 id="within-the-unity-iap-istorelistener"><a id="unity-iap"></a> Within the Unity IAP IStoreListener</h2>
 <p>Для того, чтобы использовать <code>CloudPurchaseClient</code> вместе с <code>Unity IAP IStoreListener</code> сначала нужно найти файл <code>Assets/CME/Sample/Extensions.cs</code> в Unity проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.</p>
 <p>Пример использования <code>CloudPurchaseClient</code> c <code>Unity IAP IStoreListener</code> для валидации платежей:</p>
-<pre><code>public class PurchaseProcessor : MonoBehaviour, IStoreListener
-{
-    private IStoreController? _storeController;
-
-    public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
-    {
-        _storeController = controller;
-    }
-
-    public void OnInitializeFailed(InitializationFailureReason error)
-    {
-        // Process error
-    }
-
-    public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
-    {
-        // Validate purchase without awaiting method
-        ValidatePurchase(purchaseEvent.purchasedProduct);
-
-        // We are still waiting for purchase validation
-        return PurchaseProcessingResult.Pending;
-    }
-
-    public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
-    {
-        // Process error
-    }
-
-    private async Task ValidatePurchase(Product purchasedProduct)
-    {
-        try
-        {
-            using (var iapValidator = new CloudPurchaseClient())
-            {
-                var request = CreateValidationRequest(purchasedProduct);
-                var response = await iapValidator.Validate(request);
-
-                if (response.Valid)
-                {
-                    // All good
-
-                    if (response.PurchaseType != PurchaseType.Paid)
-                    {
-                        // This is not real pay, Tester etc
-                    }
-                }
-                else
-                {
-                    // See details in response.ErrorCode and response.ErrorMessage
-                }
-            }
-        }
-        finally
-        {
-            // Confirm
-            _storeController?.ConfirmPendingPurchase(purchasedProduct);
-        }
-    }
-
-    private ValidationRequest CreateValidationRequest(Product purchasedProduct)
-    {
-#if UNITY_ANDROID
-        // Create validator
-        var validator = new CrossPlatformValidator(
-            GooglePlayTangle.Data(),
-            AppleTangle.Data(),
-            UnityEngine.Application.identifier);
-
-        var result = validator.Validate(purchasedProduct.receipt);
-
-        foreach (var purchaseReceipt in result)
-        {
-            if (purchaseReceipt is GooglePlayReceipt googlePlayReceipt)
-            {
-                // Use extension method to create ValidationRequest from GooglePlayReceipt
-                return googlePlayReceipt.AsValidationRequest(); 
-            }
-        }
-#elif UNITY_IOS
-        // Create validator
-        var validator = new CrossPlatformValidator(
-            GooglePlayTangle.Data(),
-            AppleTangle.Data(),
-            UnityEngine.Application.identifier);
-
-        var result = validator.Validate(purchasedProduct.receipt);
-
-        // Use extension method to create ValidationRequest from Product
-        return purchasedProduct.AsAppleValidationRequest();
-#endif
-        throw new Exception(&quot;Can't create validation request!&quot;);
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PurchaseProcessor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="p">,</span><span class="w"> </span><span class="n">IStoreListener</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">IStoreController</span><span class="p">?</span><span class="w"> </span><span class="n">_storeController</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnInitialized</span><span class="p">(</span><span class="n">IStoreController</span><span class="w"> </span><span class="n">controller</span><span class="p">,</span><span class="w"> </span><span class="n">IExtensionProvider</span><span class="w"> </span><span class="n">extensions</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">_storeController</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">controller</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnInitializeFailed</span><span class="p">(</span><span class="n">InitializationFailureReason</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="c1">// Process error</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">PurchaseProcessingResult</span><span class="w"> </span><span class="nf">ProcessPurchase</span><span class="p">(</span><span class="n">PurchaseEventArgs</span><span class="w"> </span><span class="n">purchaseEvent</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="n">ValidatePurchase</span><span class="p">(</span><span class="n">purchaseEvent</span><span class="p">.</span><span class="n">purchasedProduct</span><span class="p">);</span><span class="w"> </span><span class="c1">// (6)</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">PurchaseProcessingResult</span><span class="p">.</span><span class="n">Pending</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnPurchaseFailed</span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="n">PurchaseFailureReason</span><span class="w"> </span><span class="n">failureReason</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="c1">// Process error</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidatePurchase</span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">purchasedProduct</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="k">try</span><span class="w"></span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">iapValidator</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CloudPurchaseClient</span><span class="p">())</span><span class="w"></span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">CreateValidationRequest</span><span class="p">(</span><span class="n">purchasedProduct</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">iapValidator</span><span class="p">.</span><span class="n">Validate</span><span class="p">(</span><span class="n">request</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">Valid</span><span class="p">)</span><span class="w"> </span><span class="c1">// (2)</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">                </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">PurchaseType</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">PurchaseType</span><span class="p">.</span><span class="n">Paid</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">                    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">                        </span><span class="c1">// This is not real pay, Tester etc</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">                </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">                </span><span class="k">else</span><span class="w"></span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">                </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">                    </span><span class="c1">// See details in response.ErrorCode and response.ErrorMessage</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">                </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">        </span><span class="k">finally</span><span class="w"></span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">            </span><span class="n">_storeController</span><span class="p">?.</span><span class="n">ConfirmPendingPurchase</span><span class="p">(</span><span class="n">purchasedProduct</span><span class="p">);</span><span class="w"> </span><span class="c1">// (3)</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">ValidationRequest</span><span class="w"> </span><span class="nf">CreateValidationRequest</span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">purchasedProduct</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="cp">#if UNITY_ANDROID</span><span class="w"></span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">validator</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrossPlatformValidator</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">            </span><span class="n">GooglePlayTangle</span><span class="p">.</span><span class="n">Data</span><span class="p">(),</span><span class="w"></span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">            </span><span class="n">AppleTangle</span><span class="p">.</span><span class="n">Data</span><span class="p">(),</span><span class="w"></span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">            </span><span class="n">UnityEngine</span><span class="p">.</span><span class="n">Application</span><span class="p">.</span><span class="n">identifier</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">validator</span><span class="p">.</span><span class="n">Validate</span><span class="p">(</span><span class="n">purchasedProduct</span><span class="p">.</span><span class="n">receipt</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">purchaseReceipt</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">purchaseReceipt</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">GooglePlayReceipt</span><span class="w"> </span><span class="n">googlePlayReceipt</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">googlePlayReceipt</span><span class="p">.</span><span class="n">AsValidationRequest</span><span class="p">();</span><span class="w"> </span><span class="c1">// (4)</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="cp">#elif UNITY_IOS</span><span class="w"></span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">validator</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CrossPlatformValidator</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a><span class="w">            </span><span class="n">GooglePlayTangle</span><span class="p">.</span><span class="n">Data</span><span class="p">(),</span><span class="w"></span>
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="w">            </span><span class="n">AppleTangle</span><span class="p">.</span><span class="n">Data</span><span class="p">(),</span><span class="w"></span>
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="w">            </span><span class="n">UnityEngine</span><span class="p">.</span><span class="n">Application</span><span class="p">.</span><span class="n">identifier</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">validator</span><span class="p">.</span><span class="n">Validate</span><span class="p">(</span><span class="n">purchasedProduct</span><span class="p">.</span><span class="n">receipt</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">purchasedProduct</span><span class="p">.</span><span class="n">AsAppleValidationRequest</span><span class="p">();</span><span class="w"> </span><span class="c1">// (5)</span>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="cp">#endif</span><span class="w"></span>
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;Can&#39;t create validation request!&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>Still waiting for the purchase validation. Confirmation will be after validation.</li>
+<li>It means that purchase is good.</li>
+<li>Finally confirm the purchase.</li>
+<li>Use extension method to create ValidationRequest from GooglePlayReceipt.</li>
+<li>Use extension method to create ValidationRequest from Product.</li>
+<li>Don't need to await this call because we set purchase state to <code>Pending</code> below.</li>
+</ol>
 
               
             </article>
@@ -727,7 +728,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
     
