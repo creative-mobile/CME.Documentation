@@ -563,7 +563,7 @@
 <li>It means that purchase is good.</li>
 </ol>
 <h2 id="within-the-unity-iap-istorelistener"><a id="unity-iap"></a> Within the Unity IAP IStoreListener</h2>
-<p>Для того, чтобы использовать <code>CloudPurchaseClient</code> вместе с <code>Unity IAP IStoreListener</code> сначала нужно найти файл <code>Assets/CME/Sample/Extensions.cs</code> в Unity проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.</p>
+<p>Для того, чтобы использовать <code>CloudPurchaseClient</code> вместе с <code>Unity IAP IStoreListener</code> сначала найдите файл <code>Assets/CME/Sample/Extensions.cs</code> в Unity проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.</p>
 <p>Пример использования <code>CloudPurchaseClient</code> c <code>Unity IAP IStoreListener</code> для валидации платежей:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PurchaseProcessor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="p">,</span><span class="w"> </span><span class="n">IStoreListener</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span><span class="w"></span>
