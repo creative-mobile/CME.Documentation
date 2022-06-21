@@ -3,7 +3,7 @@ copyright: Copyright &copy; 2010 – 2022 CREATIVE MOBILE OÜ
 
 repo_url: https://github.com/creative-mobile/CME.Documentation
 edit_uri: edit/main/docs/
-repo_name: creative-mobile/CME.Documentation
+repo_name: CME.Documentation
 
 nav:
   - "User Guide":
