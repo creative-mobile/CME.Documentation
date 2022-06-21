@@ -1,4 +1,4 @@
-site_name: Creative Mobile Elements
+site_name: CM Elements
 nav:
   - "User Guide":
     - "What is CME CloudPurchase?": index.md
@@ -19,8 +19,10 @@ theme:
     - navigation.top
     - toc.follow
   palette:
-    primary: black
-    accent: amber
+    primary: white
+    accent: green
+  logo: assets/CM_Elements_Logotype_full.svg
+  favicon: assets/CM_Elements_Logotype.svg
 
 markdown_extensions:
   - attr_list
