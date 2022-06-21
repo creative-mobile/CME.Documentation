@@ -29,20 +29,18 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/Creative_Mobile
+      link: https://twitter.com/CM_Elements
       name: CME on Twitter
     - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/CreativeMobile
+      link: https://www.facebook.com/CMElements
       name: CME on Facebook 
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/creativemobile
-      name: CME on Instagram
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/BUefC7x3
+      name: CME on Discord
     - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/c/creativemobile
+      link: https://www.youtube.com/channel/UCmVqOVnAbXFNFRKTvihcrgg
       name: CME on Youtube
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/cmgames/
-      name: CME on Linkedin
+    
 
 
 markdown_extensions:
