@@ -63,8 +63,8 @@ CME CloudPurchase это расширение Unity для серверной о
 
 ## <a id="costs"></a> CME CloudPurchase costs
 
-CME CloudPurchase очень экономно использует ресурсы AWS и [попадает с большым запасом](https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267) в ограничения AWS Free Tier.
+CME CloudPurchase очень экономно использует ресурсы AWS и [попадает с большым запасом](https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267){target=_blank} в ограничения AWS Free Tier.
 
-Поэтому при использовании [триальной версии](Unity Asset Store) CME CloudPurchase будет для вас полностью бесплатен.
+Поэтому при использовании [триальной версии](Unity Asset Store){target=_blank} CME CloudPurchase будет для вас полностью бесплатен.
 
-При невозможности использовать AWS Free Tier стоимсть эксплуалтации [остается крайне эффективной](https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267). 
+При невозможности использовать AWS Free Tier стоимсть эксплуалтации [остается крайне эффективной](https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267){target=_blank}. 

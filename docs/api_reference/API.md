@@ -32,7 +32,7 @@ Validate in-app purchase.
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | request | [CME.CloudPurchase.ValidationRequest](#T-CME-CloudPurchase-ValidationRequest 'CME.CloudPurchase.ValidationRequest') | Purchase details to validate |
-| executionLogger | [System.Action{System.String}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Action 'System.Action{System.String}') | Delegate for logging validation result |
+| executionLogger | [System.Action{System.String}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Action 'System.Action{System.String}'){target=_blank} | Delegate for logging validation result |
 
 <a name='T-CME-CloudPurchase-FakeReceipt'></a>
 ## FakeReceipt `type`

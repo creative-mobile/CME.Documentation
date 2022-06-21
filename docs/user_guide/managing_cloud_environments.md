@@ -38,10 +38,10 @@ aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
 region                = us-east-1
 ```
 
-Подробнее о том, что такое AWS credentials можно узнать [здесь](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html), а о том, как получить AWS credentials [здесь](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-your-credentials.html).
+Подробнее о том, что такое AWS credentials можно узнать [здесь](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html){target=_blank}, а о том, как получить AWS credentials [здесь](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-your-credentials.html){target=_blank}.
 
 ### <a id="edit-google-credentials"></a> Edit Google Credentials
-Кнопка `Edit Google Credentials` открывает `GoogleCredentials.json` файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account).
+Кнопка `Edit Google Credentials` открывает `GoogleCredentials.json` файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
 
 ## Danger Zone
 

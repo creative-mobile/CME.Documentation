@@ -1,4 +1,6 @@
 site_name: CM Elements
+copyright: Copyright &copy; 2010 – 2022 CREATIVE MOBILE OÜ
+
 nav:
   - "User Guide":
     - "What is CME CloudPurchase?": index.md
@@ -23,6 +25,25 @@ theme:
     accent: green
   logo: assets/CM_Elements_Logotype_full.svg
   favicon: assets/CM_Elements_Logotype.svg
+  
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Creative_Mobile
+      name: CME on Twitter
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/CreativeMobile
+      name: CME on Facebook 
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/creativemobile
+      name: CME on Instagram
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/creativemobile
+      name: CME on Youtube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/cmgames/
+      name: CME on Linkedin
+
 
 markdown_extensions:
   - attr_list
