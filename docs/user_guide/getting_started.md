@@ -50,4 +50,4 @@
 3. Выдайте необходимые разрешения для аккаунта.
 ![!](../assets/google_3.gif)
 
-Подробнее о процессе создания и настройки сервисного аккаунта можно узнать [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}
+Подробнее о процессе создания и настройки сервисного аккаунта можно узнать [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
