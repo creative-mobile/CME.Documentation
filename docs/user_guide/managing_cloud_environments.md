@@ -1,10 +1,14 @@
 # Managing Cloud Environments
 
-### <a id="control-panel"></a> Control Panel Overview
+Управление AWS окружением и его деплоем, а также настройка плагина осуществляются прямо из Unity при помощи окна Control Panel.
 
 Чтобы открыть `Control Panel` нажмите `CME -> Cloud Purchase -> Control Panel`. После этого откроется окно Control Panel.
 
 ![!](../assets/open-control-panel.gif)
+
+## <a id="control-panel"></a> Control Panel Overview
+
+![!](../assets/control-panel-overview.JPG){: style="height:547px;width:322px"}
 
 ### <a id="target-environment"></a> Target Environment
 
@@ -16,6 +20,8 @@
 
 ## Inspection
 
+![!](../assets/control-panel-inspection.JPG){: style="height:547px;width:322px"}
+
 ### <a id="make-test-purchase"></a> Test Deployment
 
 Кнопка `Make Test Purchase` позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на [дашборде](#environment-dashboard).
@@ -26,6 +32,8 @@
 Подробнее о возможностях дашборда [здесь](usage_statistics.md).
 
 ## Configuration
+
+![!](../assets/control-panel-configuration.JPG){: style="height:547px;width:322px"}
 
 ### <a id="edit-aws-profile"></a> Edit AWS Profile
 
@@ -40,10 +48,12 @@ region                = us-east-1
 
 Подробнее о том, что такое AWS credentials можно узнать [здесь](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html){target=_blank}, а о том, как получить AWS credentials [здесь](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-your-credentials.html){target=_blank}.
 
-### <a id="edit-google-credentials"></a> Edit Google Credentials
-Кнопка `Edit Google Credentials` открывает `GoogleCredentials.json` файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
+### <a id="edit-google-credentials"></a> Set\Edit Google Credentials
+Кнопка `Set\Edit Google Credentials` открывает `GoogleCredentials.json` файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
 
 ## Danger Zone
+
+![!](../assets/control-panel-danger-zone.JPG){: style="height:547px;width:322px"}
 
 ### <a id="destroy-environment"></a> Destroy Environment
 По нажатию кнопки `Destroy Environment` выбранное окружение будет удалено **вместе со всеми сопутствующими данными**.
