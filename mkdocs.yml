@@ -1,4 +1,10 @@
-site_name: Creative Mobile Elements
+site_name: CM Elements
+copyright: Copyright &copy; 2010 – 2022 CREATIVE MOBILE OÜ
+
+repo_url: https://github.com/creative-mobile/CME.Documentation
+edit_uri: edit/main/docs/
+repo_name: CME.Documentation
+
 nav:
   - "User Guide":
     - "What is CME CloudPurchase?": index.md
@@ -20,8 +26,27 @@ theme:
     - toc.follow
     - content.code.annotate
   palette:
-    primary: black
-    accent: amber
+    primary: white
+    accent: green
+  logo: assets/CM_Elements_Logotype_full.svg
+  favicon: assets/CM_Elements_Logotype.svg
+  
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/CM_Elements
+      name: CME on Twitter
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/CMElements
+      name: CME on Facebook 
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/BUefC7x3
+      name: CME on Discord
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCmVqOVnAbXFNFRKTvihcrgg
+      name: CME on Youtube
+    
+
 
 markdown_extensions:
   - attr_list
@@ -30,4 +55,5 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.superfences

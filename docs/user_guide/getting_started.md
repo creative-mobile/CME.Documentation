@@ -11,17 +11,17 @@
 
 Актуальная версия CME CloudPurchase находится в [Unity Asset Store](https://assetstore.unity.com/preview/224332/710152), при желании можно воспользоваться [пробной версией](https://assetstore.unity.com/preview/224130/709634).
 
-Хороший мануал по установки unity плагинов есть на [сайте](https://docs.unity3d.com/Manual/AssetPackagesPurchase.html) официальной документации Unity.
+Хороший мануал по установки unity плагинов есть на [сайте](https://docs.unity3d.com/Manual/AssetPackagesPurchase.html){target=_blank} официальной документации Unity.
 
 ## <a id="aws-credentials"></a> Get your AWS security credentials
 
-Если у вас еще нету аккаунта в AWS, то рекомендуем выполнить шаги [официального руководства](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
+Если у вас еще нету аккаунта в AWS, то рекомендуем выполнить шаги [официального руководства](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/){target=_blank}.
 
 В случае, если аккаунт уже есть то можно переходить к получению ключей доступа.
 
 ### Generating security credentials
 
-Для получения ключей доступа перейите в раздел [Identity and Access Management](https://console.aws.amazon.com/iamv2/home) и выполните следующие действия:
+Для получения ключей доступа перейите в раздел [Identity and Access Management](https://console.aws.amazon.com/iamv2/home){target=_blank} и выполните следующие действия:
 
 ![!](../assets/AWS%20first%20run3.gif)
 
@@ -50,4 +50,4 @@
 3. Выдайте необходимые разрешения для аккаунта.
 ![!](../assets/google_3.gif)
 
-Подробнее о процессе создания и настройки сервисного аккаунта можно узнать [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account)
+Подробнее о процессе создания и настройки сервисного аккаунта можно узнать [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}
