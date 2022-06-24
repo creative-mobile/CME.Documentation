@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../assets/CM_Elements_Logotype.svg">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
@@ -18,10 +18,10 @@
     
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
           
           
@@ -349,19 +349,25 @@
      Control Panel Overview
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label=" Control Panel Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#target-environment" class="md-nav__link">
      Target Environment
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#deploy-update-deployment" class="md-nav__link">
      Deploy \ Update Deployment
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -408,8 +414,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#edit-google-credentials" class="md-nav__link">
-     Edit Google Credentials
+  <a href="#setedit-google-credentials" class="md-nav__link">
+     Set\Edit Google Credentials
   </a>
   
 </li>
@@ -596,19 +602,25 @@
      Control Panel Overview
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label=" Control Panel Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#target-environment" class="md-nav__link">
      Target Environment
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#deploy-update-deployment" class="md-nav__link">
      Deploy \ Update Deployment
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -655,8 +667,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#edit-google-credentials" class="md-nav__link">
-     Edit Google Credentials
+  <a href="#setedit-google-credentials" class="md-nav__link">
+     Set\Edit Google Credentials
   </a>
   
 </li>
@@ -705,32 +717,37 @@
 
 
 <h1 id="managing-cloud-environments">Managing Cloud Environments</h1>
-<h3 id="control-panel-overview"><a id="control-panel"></a> Control Panel Overview</h3>
+<p>Управление AWS окружением и его деплоем, а также настройка плагина осуществляются прямо из Unity при помощи окна Control Panel.</p>
 <p>Чтобы открыть <code>Control Panel</code> нажмите <code>CME -&gt; Cloud Purchase -&gt; Control Panel</code>. После этого откроется окно Control Panel.</p>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/open-control-panel.gif"><img alt="" src="../../assets/open-control-panel.gif" /></a></div></p>
+<h2 id="control-panel-overview"><a id="control-panel"></a> Control Panel Overview</h2>
+<p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-overview.JPG"><img alt="" src="../../assets/control-panel-overview.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="target-environment"><a id="target-environment"></a> Target Environment</h3>
 <p>Параметр <code>Target Environment</code> определяет, каким окружением управлять. Доступно два окружения: <code>testing</code> и <code>production</code>. </p>
 <h3 id="deploy-update-deployment"><a id="deploy"></a> Deploy \ Update Deployment</h3>
 <p>Кнопка <code>Deploy \ Update Deployment</code> разворачивает выбранное окружение в AWS с текущими настройками или обновляет его, если оно уже было развернуто ранее.</p>
 <h2 id="inspection">Inspection</h2>
+<p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-inspection.JPG"><img alt="" src="../../assets/control-panel-inspection.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="test-deployment"><a id="make-test-purchase"></a> Test Deployment</h3>
 <p>Кнопка <code>Make Test Purchase</code> позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на <a href="#environment-dashboard">дашборде</a>.</p>
 <h3 id="environment-dashboard"><a id="environment-dashboard"></a> Environment Dashboard</h3>
 <p>Кнопка <code>Open Environment Dashboard</code> открывает в браузере дашборд в Amazon CloudWatch, на котором собрана информация о платежах на выбранном окружении.
 Подробнее о возможностях дашборда <a href="../usage_statistics/">здесь</a>.</p>
 <h2 id="configuration">Configuration</h2>
+<p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-configuration.JPG"><img alt="" src="../../assets/control-panel-configuration.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="edit-aws-profile"><a id="edit-aws-profile"></a> Edit AWS Profile</h3>
 <p>Кнопка <code>Edit AWS Profile</code> открывает <code>credentials</code> файл, где описываются credentials для AWS сервисов. 
-Пример того, как выглядят credentials описан ниже:</p>
-<pre><code>[cme-cloud-deploy]
-aws_access_key_id     = AKIAXXXX1XXXXXX1XX1X
-aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
-region                = us-east-1
-</code></pre>
+Пример того, как выглядят credentials описан ниже:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[cme-cloud-deploy]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>aws_access_key_id     = AKIAXXXX1XXXXXX1XX1X
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>region                = us-east-1
+</code></pre></div></p>
 <p>Подробнее о том, что такое AWS credentials можно узнать <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html" target="_blank">здесь</a>, а о том, как получить AWS credentials <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-your-credentials.html" target="_blank">здесь</a>.</p>
-<h3 id="edit-google-credentials"><a id="edit-google-credentials"></a> Edit Google Credentials</h3>
-<p>Кнопка <code>Edit Google Credentials</code> открывает <code>GoogleCredentials.json</code> файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials <a href="https://developers.google.com/workspace/guides/create-credentials#service-account" target="_blank">здесь</a>.</p>
+<h3 id="setedit-google-credentials"><a id="edit-google-credentials"></a> Set\Edit Google Credentials</h3>
+<p>Кнопка <code>Set\Edit Google Credentials</code> открывает <code>GoogleCredentials.json</code> файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials <a href="https://developers.google.com/workspace/guides/create-credentials#service-account" target="_blank">здесь</a>.</p>
 <h2 id="danger-zone">Danger Zone</h2>
+<p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-danger-zone.JPG"><img alt="" src="../../assets/control-panel-danger-zone.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="destroy-environment"><a id="destroy-environment"></a> Destroy Environment</h3>
 <p>По нажатию кнопки <code>Destroy Environment</code> выбранное окружение будет удалено <strong>вместе со всеми сопутствующими данными</strong>.</p>
 
@@ -835,11 +852,11 @@ region                = us-east-1
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
       
     
     <script>
