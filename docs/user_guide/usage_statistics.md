@@ -2,9 +2,7 @@
 
 Базовый мониторинг платежей доступен с использованием возможностей AWS CloudWatch, а с помощью выгруженной в CSV истории можно проводить полнофункциональный анализ удобными вам инструментами.
 
-## <a id="sensetive-data"></a> Sensetive data 
-
-Здесь будет про персональные данные
+![!](../assets/dashboard-preview.jpg)
 
 ## <a id="dashboard"></a> Environment dashboard overview
 
@@ -26,6 +24,13 @@
  * Добавить виджеты к дашборду, изменить имя дашборда, удалить дашборд и т.д.
 
 Подробнее о работе с дашбордами в CloudWatch можно узнать [здесь](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html).
+
+## <a id="sensetive-data"></a> Sensetive data 
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>В журнал платежей попадают персональные данные пользователя, а именно поле <a href="/api_reference/CME.CloudPurchase/#F-CME-CloudPurchase-ValidationRequest-UserId">UserId</a>. По-умолчанию, время хранения персональных данных составляет две недели.</p>
+</div>
 
 ## <a id="data-export"></a> Export your purchase history 
 
