@@ -14,7 +14,8 @@ nav:
     - "Developer Guide":
       - "Making Validation Requests": user_guide/making_validation_requests.md
   - "API Reference":
-    - api_reference/API.md
+    - "Namespaces":
+      - api_reference/CME.CloudPurchase.md
 theme:
   name: material
   custom_dir: theme/
