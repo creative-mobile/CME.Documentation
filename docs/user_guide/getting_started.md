@@ -23,7 +23,7 @@
 
 Для получения ключей доступа перейите в раздел [Identity and Access Management](https://console.aws.amazon.com/iamv2/home){target=_blank} и выполните следующие действия:
 
-![!](../assets/AWS%20first%20run3.gif)
+![!](../assets/get_aws_creds.gif)
 
 ## <a id="deployment"></a> Make your first deployment
 
@@ -35,7 +35,7 @@
 
 Теперь вы готовы развернуть свое первое CME CloudPurchase приложения, для этого откройте Unity Editor преокт с установленным плагинов и выполните следующие действия:
 
-![!](../assets/unity%20first%20run3.gif)
+![](../assets/first deploy.gif)
 
 ## <a id="stores"></a> Configure stores integrations
 
