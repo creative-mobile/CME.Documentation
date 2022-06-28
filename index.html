@@ -13,7 +13,7 @@
     
     
       
-        <title>What is CME CloudPurchase? - CM Elements</title>
+        <title>What is CME CloudPurchase? - </title>
       
     
     
@@ -59,7 +59,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="green">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="light-green">
   
     
     
@@ -79,11 +79,12 @@
     </div>
     
     
+
       
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="CM Elements" class="md-header__button md-logo" aria-label="CM Elements" data-md-component="logo">
+    <a href="." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="assets/CM_Elements_Logotype_full.svg" alt="logo">
 
@@ -95,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CM Elements
+            
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -160,6 +161,10 @@
   
 </header>
     
+<script>
+    document.querySelector("body > header > nav > a > img").style.height = "2rem"
+</script>
+
     <div class="md-container" data-md-component="container">
       
       
@@ -232,12 +237,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="CM Elements" class="md-nav__button md-logo" aria-label="CM Elements" data-md-component="logo">
+    <a href="." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="assets/CM_Elements_Logotype_full.svg" alt="logo">
 
     </a>
-    CM Elements
+    
   </label>
   
     <div class="md-nav__source">
@@ -366,6 +371,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Расширение и модификация
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -380,14 +392,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     Облачное приложение
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     Среда развертывания
   </a>
   
@@ -663,6 +675,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Расширение и модификация
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -677,14 +696,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     Облачное приложение
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     Среда развертывания
   </a>
   
@@ -722,12 +741,14 @@
 
 <h1 id="what-is-cme-cloudpurchase">What is CME CloudPurchase?</h1>
 <h2 id="overview">Overview</h2>
-<p>CME CloudPurchase это расширение Unity для серверной обработки внутриигровых платежей в вашей собственной облачной среде AWS.</p>
-<p><div class="lightgallery"><a data-sub-html="" href="../assets/architecture.jpg"><img alt="" src="../assets/architecture.jpg" /></a></div></p>
+<p><strong>CME CloudPurchase</strong> это расширение <strong>Unity</strong> для серверной обработки внутриигровых платежей в вашей собственной облачной среде <strong>AWS</strong>.</p>
+<p>Основное отличие от подобных систем - запуск серверной части на собственном аккаунте <strong>AWS</strong>. Звучит интригующе и сложно? Мы подготовили подробные <a href="user_guide/getting_started/#stores">инструкции</a> как завести и настроить новый аккаунт, а сам процесс разворачивания облачной инфраструктуры происходит из интерфейса Unity всего за пару кликов. </p>
+<p>В итоге вы получаете серверное решение развернутое в собственном облаке, без ежемесячных платежей за подписку и с безграничными возможностями по расширению функционала!
+<div class="lightgallery"><a data-sub-html="" href="../assets/architecture.jpg"><img alt="" src="../assets/architecture.jpg" /></a></div></p>
 <p>Расширение состоит из двух частей:</p>
 <ol>
 <li>Готовый к использованию C# код клиентской и серверной обработки платежей;</li>
-<li>Инструменты развертывания облачного приложения встроенные в Unity Editor.</li>
+<li>Инструменты развертывания облачного приложения встроенные в <strong>Unity Editor</strong>.</li>
 </ol>
 <p><strong>Topics</strong></p>
 <ul>
@@ -737,30 +758,32 @@
 </ul>
 <h2 id="cme-cloudpurchase-features"><a id="features"></a> CME CloudPurchase features</h2>
 <h3 id="_1">Проверка корректности платежей</h3>
-<p>Для более надежного подтверждения корректности внутриигровых покупок CloudPurchase производит проверку используя специальные API для каждой из поддерживаемых платформ.</p>
-<p>На данный момент подерживаются Google Play Store и Apple App Store.</p>
+<p>Для более надежного подтверждения корректности внутриигровых покупок <strong>CME CloudPurchase</strong> производит проверку используя специальные API для каждой из поддерживаемых платформ.</p>
+<p>На данный момент подерживаются <strong>Google Play Store</strong> и <strong>Apple App Store</strong>.</p>
 <p>Подробнее про интеграцию с платформами, смотрите раздел <a href="user_guide/getting_started/#stores">Getting Started / Configure stores integrations</a> в руководстве пользователя.</p>
 <h3 id="_2">Идентификация тестовых платежей</h3>
-<p>Для обоснованного принятия решений CloudPurchase помогает отделить тестовые платежи, и, при возможности, повторные покупки.</p>
+<p>Для обоснованного принятия решений <strong>CME CloudPurchase</strong> помогает отделить тестовые платежи, и, при возможности, повторные покупки.</p>
 <p>Подробнее о механике проверки платежей и работы, смотрите раздел <a href="user_guide/making_validation_requests/">Making Validation Requests</a> в руководстве разработчика.</p>
 <h3 id="_3">Отслеживание истории платежей</h3>
-<p>За счет специального формата логирования и метрик в Amazon CloudWatch, CloudPurchase позволяют наблюдать платежи в реальном времени, а так же выгрузить всю историю платежей для дальнейшего анализа.</p>
+<p>За счет специального формата логирования и метрик в <strong>Amazon CloudWatch</strong>, <strong>CME CloudPurchase</strong> позволяют наблюдать платежи в реальном времени, а так же выгрузить всю историю платежей для дальнейшего анализа.</p>
 <p>Подробнее о статистике использоваания и наблюдении облачного приложения, смотрите раздел <a href="user_guide/usage_statistics/">Usage Statistics and Monitoring</a> в руководстве пользователя.</p>
 <h3 id="_4">Управление средами развертывания</h3>
-<p>Для удобства проверки конфигурации облачного приложения CloudPurchase порзволяет переключаться между тестовой и основной средой эксплуатации прямо из Unity Editor.</p>
+<p>Для удобства проверки конфигурации облачного приложения <strong>CME CloudPurchase</strong> порзволяет переключаться между тестовой и основной средой эксплуатации прямо из <strong>Unity Editor</strong>.</p>
 <p>Подробнее о развертывании в облаке, смотрите раздел <a href="user_guide/managing_cloud_environments/">Managing Cloud Environments</a> в руководстве разработчика.</p>
+<h3 id="_5">Расширение и модификация</h3>
+<p>Для "бесшовной" интеграции с логикой вашего приложения вся runtime логика подробно документирована и открыта к адаптации.</p>
 <h2 id="how-cme-cloudpurchase-works"><a id="how-it-works"></a> How CME CloudPurchase works</h2>
 <p>Обработка каждого платежа в рамках сценария совершения покупки происходит за счет вызова к <strong>облачному приложению</strong> развернутого в выбранной <strong>среде</strong>.</p>
 <p>Вызов производиться с использованием <a href="api_reference/namespaces.md">клиентской библиотеки</a> встраиваемой в игру.</p>
-<p>Выбор среды производится в специальном окне расширения Unity Editor перед сборкой или запуском приложения.</p>
-<h3 id="_5">Облачное приложение</h3>
-<p>Облачное приложение это набор связанных компонетов AWS минимально необходимых для проверки, хранения и наблюдения истории платежей.</p>
-<h3 id="_6">Среда развертывания</h3>
+<p>Выбор среды производится в специальном окне расширения <strong>Unity Editor</strong> перед сборкой или запуском приложения.</p>
+<h3 id="_6">Облачное приложение</h3>
+<p>Облачное приложение это набор связанных компонетов <strong>AWS</strong> минимально необходимых для проверки, хранения и наблюдения истории платежей.</p>
+<h3 id="_7">Среда развертывания</h3>
 <p>Приложение разделено на именованные среды для возможности безопасного тестирования конфигураций и расширений облачного приложения.</p>
 <h2 id="cme-cloudpurchase-costs"><a id="costs"></a> CME CloudPurchase costs</h2>
-<p>CME CloudPurchase очень экономно использует ресурсы AWS и <a href="https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267" target="_blank">попадает с большым запасом</a> в ограничения AWS Free Tier.</p>
-<p>Поэтому при использовании <a href="Unity Asset Store" target="_blank">триальной версии</a> CME CloudPurchase будет для вас полностью бесплатен.</p>
-<p>При невозможности использовать AWS Free Tier стоимсть эксплуалтации <a href="https://calculator.aws/#/estimate?id=ae2647b051d15f2c996d1102bce3725352ce5267" target="_blank">остается крайне эффективной</a>. </p>
+<p><strong>CME CloudPurchase</strong> очень экономно использует ресурсы <strong>AWS</strong> и <a href="https://calculator.aws/#/estimate?id=173c99261f287852c34cb50214c1fe6c34f4e14b" target="_blank">попадает с большым запасом</a> в ограничения <strong>AWS Free Tier</strong>.</p>
+<p>Поэтому при использовании <a href="https://assetstore.unity.com/preview/224130/709634" target="_blank">триальной версии</a> <strong>CME CloudPurchase</strong> будет для вас полностью бесплатен.</p>
+<p>При невозможности использовать <strong>AWS Free Tier</strong> стоимсть эксплуалтации <a href="https://calculator.aws/#/estimate?id=4146e963f41967449d736e1a9b1d80cadda074a1" target="_blank">остается крайне эффективной</a>. </p>
 
               
             </article>
