@@ -19,3 +19,10 @@
     }
     </script>
 {% endblock scripts %}
+
+{% block header %}
+{{ super() }}
+<script>
+    document.querySelector("body > header > nav > a > img").style.height = "2rem"
+</script>
+{% endblock header %}

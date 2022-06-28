@@ -1,4 +1,4 @@
-site_name: CM Elements
+site_name: ""
 copyright: Copyright &copy; 2010 – 2022 CREATIVE MOBILE OÜ
 
 repo_url: https://github.com/creative-mobile/CME.Documentation
@@ -28,7 +28,7 @@ theme:
     - content.code.annotate
   palette:
     primary: white
-    accent: green
+    accent: light green
   logo: assets/CM_Elements_Logotype_full.svg
   favicon: assets/CM_Elements_Logotype.svg
   
