@@ -35,10 +35,10 @@ Client for validating purchases.
 
 ##### Parameters
 
-| Name            | Type                                                                                                                                                  | Description                            |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| request         | [CME.CloudPurchase.ValidationRequest](#T-CME-CloudPurchase-ValidationRequest 'CME.CloudPurchase.ValidationRequest')                                   | Purchase details to validate           |
-| executionLogger | [System.Action{System.String}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Action 'System.Action{System.String}') | Delegate for logging validation result |
+| Name            | Type                                                                                                                                      | Description                            |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| request         | [CME.CloudPurchase.ValidationRequest](#T-CME-CloudPurchase-ValidationRequest 'CME.CloudPurchase.ValidationRequest')                       | Purchase details to validate           |
+| executionLogger | [System.Action{System.String}](https://docs.microsoft.com/en-gb/dotnet/api/system.action-1?view=net-6.0 'System.Action{System.String}'){target=_blank} | Delegate for logging validation result |
 
 ##### Returns
 
@@ -53,12 +53,12 @@ Enum of types of purchase.
 
 #### Values
 
-| Name    | Value | Description |
-|---------|-------|-------------|
-| Unknown | 0     |             |
-| Paid    | 1     |             |
-| Test    | 2     |             |
-| Promo   | 3     |             |
+| Name    | Value | Description            |
+|---------|-------|------------------------|
+| Unknown | 0     | Unknown type           |
+| Paid    | 1     | Оплачено через магазин |
+| Test    | 2     | Тестовый платеж        |
+| Promo   | 3     | Промокод               |
 
 
 <a name='T-CME-CloudPurchase-Store'></a>
@@ -84,50 +84,29 @@ Enum of app stores
 Purchase info to validate
 
 #### Fields
-| Name          | Type                                | Description |
-|---------------|-------------------------------------|-------------|
-| Store         | [Store](#T-CME-CloudPurchase-Store) |    Store where purchase was made         |
-| PackageId     | string                              |             |
-| ProductId     | string                              |             |
-| ReceiptData   | string                              |             |
-| UserId        | string                              |             |
-| Price         | string                              |             |
-| Currency      | string                              |             |
-| PriceUsdCents | int                                 |             |
+| Name          | Type                                | Description                                       |
+|---------------|-------------------------------------|---------------------------------------------------|
+| Store         | [Store](#T-CME-CloudPurchase-Store) | Store where purchase was made                     |
+| PackageId     | string                              | Id приложения                                     |
+| ProductId     | string                              | Id товара                                         |
+| ReceiptData   | string                              | Данные с результатами обработки платежа магазином |
+| UserId        | string                              | Идентификатор пользователя                        |
+| Price         | string                              | Цена в местной валюте                             |
+| Currency      | string                              | Местная валюта                                    |
+| PriceUsdCents | int                                 | Цена в USD центах                                 |
 
 <a name='ValidationResponse'></a>
 ## ValidationResponse `type`
 
 #### Summary
 
-Details of validation result
+Details of validation result from CME Cloud Purchase cloud side
 
-<a name='F-CME-CloudPurchase-ValidationResponse-ErrorCode'></a>
-### ErrorCode `constants`
+#### Fields 
+| Name         | Type                                              | Description                               |
+|--------------|---------------------------------------------------|-------------------------------------------|
+| Valid        | bool                                              | Флаг валидности платежа                   |
+| PurchaseType | [PurchaseType](#T-CME-CloudPurchase-PurchaseType) | Тип платежа                               |
+| ErrorCode    | string                                            | Код ошибки от валидируюшей платформы      |
+| ErrorMessage | string                                            | Описание ошибки от валидируюшей платформы |
 
-#### Summary
-
-
-
-<a name='F-CME-CloudPurchase-ValidationResponse-ErrorMessage'></a>
-### ErrorMessage `constants`
-
-#### Summary
-
-<a name='F-CME-CloudPurchase-ValidationResponse-PurchaseType'></a>
-### PurchaseType `constants`
-
-#### Summary
-
-Type of validated purchase.
-
-#### See Also
-
-- [CME.CloudPurchase.PurchaseType](#T-CME-CloudPurchase-PurchaseType 'CME.CloudPurchase.PurchaseType')
-
-<a name='F-CME-CloudPurchase-ValidationResponse-Valid'></a>
-### Valid `constants`
-
-#### Summary
-
-Is purchase valid or not.
