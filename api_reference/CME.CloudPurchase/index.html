@@ -17,7 +17,7 @@
       
     
     
-    
+
       <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
       
         
@@ -29,11 +29,12 @@
         
       
     
-    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+<link rel="stylesheet" href="../../css/lightgallery.min.css">
+
 
     
-    
-    <script src="../../js/lightgallery.min.js"></script>
+
+<script src="../../js/lightgallery.min.js"></script>
 
     
       
@@ -44,6 +45,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/style.css">
     
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -79,6 +82,7 @@
     </div>
     
     
+
 
       
 
@@ -161,9 +165,6 @@
   
 </header>
     
-<script>
-    document.querySelector("body > header > nav > a > img").style.height = "2rem"
-</script>
 
     <div class="md-container" data-md-component="container">
       
@@ -1261,16 +1262,32 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "toc.follow", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-    
+
       <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
       
     
-    <script>
+<script>
     var elements = document.getElementsByClassName("lightgallery");
-    for(var i=0; i<elements.length; i++) {
-       lightGallery(elements[i]);
+    for (var i = 0; i < elements.length; i++) {
+        lightGallery(elements[i]);
     }
-    </script>
+    document.querySelector("body > header > nav > a > img").style.height = "2rem";
+
+
+    let header = document.querySelector("body > header > nav");
+    header.removeChild(document.querySelector("body > header > nav > div.md-header__source"))
+
+    let tryDiv = document.createElement("div")
+    tryDiv.setAttribute("style", "padding: 0.2rem")
+
+    let tryButton = document.createElement('a');
+    tryButton.setAttribute("class", "button");
+    tryButton.setAttribute("href", "https://assetstore.unity.com/preview/224130/709634");
+    tryButton.text = "Try Now"
+
+    tryDiv.appendChild(tryButton)
+    header.appendChild(tryDiv);
+</script>
 
   </body>
 </html>
