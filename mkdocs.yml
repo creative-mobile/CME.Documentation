@@ -47,7 +47,8 @@ extra:
       link: https://www.youtube.com/channel/UCmVqOVnAbXFNFRKTvihcrgg
       name: CME on Youtube
     
-
+extra_css:
+  - stylesheets/style.css
 
 markdown_extensions:
   - attr_list

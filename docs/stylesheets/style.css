@@ -23,6 +23,11 @@
 }
 
 .button:hover {
-    background-color: var(--md-primary-bg-color); /* Green */
+    background-color: var(--md-primary-bg-color);
     color: var(--md-accent-bg-color);
+}
+
+:root > * {
+    --md-accent-fg-color:        #7CC242;
+   
 }
