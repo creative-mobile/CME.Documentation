@@ -1,28 +1,44 @@
 {% extends "base.html" %}
 
 {% block styles %}
-    {{ super() }}
-    <link rel="stylesheet" href="{{ base_url }}/css/lightgallery.min.css">
+{{ super() }}
+<link rel="stylesheet" href="{{ base_url }}/css/lightgallery.min.css">
+<link rel="stylesheet" href="{{ base_url }}/css/style.css">
+
 {% endblock styles %}
 
 {% block libs %}
-    {{ super() }}
-    <script src="{{ base_url }}/js/lightgallery.min.js"></script>
+{{ super() }}
+<script src="{{ base_url }}/js/lightgallery.min.js"></script>
 {% endblock libs %}
 
 {% block scripts %}
-    {{ super() }}
-    <script>
+{{ super() }}
+<script>
     var elements = document.getElementsByClassName("lightgallery");
-    for(var i=0; i<elements.length; i++) {
-       lightGallery(elements[i]);
+    for (var i = 0; i < elements.length; i++) {
+        lightGallery(elements[i]);
     }
-    </script>
+    document.querySelector("body > header > nav > a > img").style.height = "2rem";
+
+
+    let header = document.querySelector("body > header > nav");
+    header.removeChild(document.querySelector("body > header > nav > div.md-header__source"))
+
+    let tryDiv = document.createElement("div")
+    tryDiv.setAttribute("style", "padding: 0.2rem")
+
+    let tryButton = document.createElement('a');
+    tryButton.setAttribute("class", "button");
+    tryButton.setAttribute("href", "https://assetstore.unity.com/preview/224130/709634");
+    tryButton.text = "Try Now"
+
+    tryDiv.appendChild(tryButton)
+    header.appendChild(tryDiv);
+</script>
 {% endblock scripts %}
 
 {% block header %}
+
 {{ super() }}
-<script>
-    document.querySelector("body > header > nav > a > img").style.height = "2rem"
-</script>
 {% endblock header %}

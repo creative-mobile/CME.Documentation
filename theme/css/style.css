@@ -1,0 +1,28 @@
+.button {
+    padding: 6px 12px;
+    border-radius: 0.1rem;
+    border: 1px solid transparent;
+    border-image: none;
+    text-align: center;
+    line-height: 1.4285;
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    -ms-user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    background-image: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color : var(--md-accent-fg-color)
+}
+
+.button:hover {
+    background-color: var(--md-primary-bg-color); /* Green */
+    color: var(--md-accent-bg-color);
+}
