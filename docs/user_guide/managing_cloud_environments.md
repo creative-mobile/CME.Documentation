@@ -1,8 +1,8 @@
 # Managing Cloud Environments
 
-Управление AWS окружением и его деплоем, а также настройка плагина осуществляются прямо из Unity при помощи окна Control Panel.
+Управление **AWS** окружением и его деплоем, а также настройка плагина осуществляются прямо из **Unity** при помощи окна **Control Panel**.
 
-Чтобы открыть `Control Panel` нажмите `CME -> Cloud Purchase -> Control Panel`. После этого откроется окно Control Panel.
+Чтобы открыть **Control Panel** нажмите `CME -> Cloud Purchase -> Show Control Panel`. После этого откроется окно **Control Panel**.
 
 ![!](../assets/open-control-panel.gif)
 
@@ -22,7 +22,7 @@
 
 ![!](../assets/control-panel-inspection.JPG){: style="height:547px;width:322px"}
 
-### <a id="make-test-purchase"></a> Test Deployment
+### <a id="make-test-purchase"></a> Make Test Purchase
 
 Кнопка `Make Test Purchase` позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на [дашборде](#environment-dashboard).
 
@@ -37,7 +37,7 @@
 
 ### <a id="edit-aws-profile"></a> Edit AWS Profile
 
-Кнопка `Edit AWS Profile` открывает `credentials` файл, где описываются credentials для AWS сервисов. 
+Кнопка `Edit AWS Profile` открывает `credentials` файл, где описываются credentials для **AWS** сервисов. 
 Пример того, как выглядят credentials описан ниже:
 ```
 [cme-cloud-deploy]
@@ -46,10 +46,10 @@ aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
 region                = us-east-1
 ```
 
-Подробнее о том, что такое AWS credentials можно узнать [здесь](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html){target=_blank}, а о том, как получить AWS credentials [здесь](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-your-credentials.html){target=_blank}.
+Подробнее о том, что такое **AWS Security Credentials** можно узнать в [официальной документции](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html){target=_blank}, а то, как из получить прекрасно описано в разделе [Getting Started](getting_started.md).
 
 ### <a id="edit-google-credentials"></a> Set\Edit Google Credentials
-Кнопка `Set\Edit Google Credentials` открывает `GoogleCredentials.json` файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials [здесь](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
+Кнопка `Set\Edit Google Credentials` открывает `GoogleCredentials.json` файл, где описываются credentials для **Google API**. Подробнее о том, как создать сервисный аккаунт Google и получить credentials узнать в [официальной документации](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
 
 ## Danger Zone
 

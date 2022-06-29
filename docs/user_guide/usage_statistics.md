@@ -4,7 +4,7 @@
 
 ![!](../assets/dashboard-preview.jpg)
 
-## <a id="dashboard"></a> Environment dashboard overview
+## <a id="dashboard"></a> Dashboard overview
 
 Для того, чтобы перейти к дашборду, нужно нажать кнопку `Open Environment Dashboard`. По умолчанию дашборд содержит разделы:
 
@@ -16,14 +16,10 @@
  В правом верхнем углу находится элементы управления дашбордом. Здесь можно:
 
  * Изменить рассматриваемый период времени.
-![!](../assets/dashboard-time-control.jpg)
-
  * Изменить интервал обновления данных.
- ![!](../assets/dashboard-refresh-control.jpg)
-
  * Добавить виджеты к дашборду, изменить имя дашборда, удалить дашборд и т.д.
 
-Подробнее о работе с дашбордами в CloudWatch можно узнать [здесь](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html).
+Подробнее о работе с дашбордами в CloudWatch можно узнать в [официальной документации](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html).
 
 ## <a id="sensetive-data"></a> Sensetive data 
 
@@ -32,7 +28,7 @@
 <p>В журнал платежей попадают персональные данные пользователя, а именно поле <a href="/api_reference/CME.CloudPurchase/#F-CME-CloudPurchase-ValidationRequest-UserId">UserId</a>. По-умолчанию, время хранения персональных данных составляет две недели.</p>
 </div>
 
-## <a id="data-export"></a> Export your purchase history 
+## <a id="data-export"></a> Exporting to the `.csv`
 
 В CloudWatch существует возможность экспортировать данные из виджета в `.csv` файл. Для того, чтобы это сделать нужно:
 

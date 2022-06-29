@@ -1,8 +1,8 @@
 # Making Validation Requests
 
-При установке нашего пакета в вашем Unity проекте появится файл `Assets/CME/Sample/CloudPurchaseSample.cs` в котором есть примеры использования `CloudPurchaseClient`.
+При установке **CME CloudPurchase** в вашем Unity проекте появится файл `Assets/CME/Sample/CloudPurchaseSample.cs` в котором есть примеры использования `CloudPurchaseClient`.
 
-Процесс проверки платежей с помощью `CME CloudPurchase` довольно прост. По-сути, все сводится к созданию инстанса [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) и использованию его метода [`Validate`](../api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). Примеры использования можно видеть ниже.
+Процесс проверки платежей с помощью **CME CloudPurchase** довольно прост. По-сути, все сводится к созданию инстанса [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) и использованию его метода [`Validate`](../api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). Примеры использования можно видеть ниже.
 
 ## <a id="client"></a> Using CloudPurchaseClient
 Пример использования `CloudPurchaseClient` для валидации платежей:
@@ -50,9 +50,11 @@ public async Task Validate()
 
 ## <a id="unity-iap"></a> Within the Unity IAP IStoreListener
 
-Для того, чтобы использовать `CloudPurchaseClient` вместе с `Unity IAP IStoreListener` сначала найдите файл `Assets/CME/Sample/Extensions.cs` в Unity проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.
+Для того, чтобы использовать `CloudPurchaseClient` вместе с **Unity IAP** сначала найдите файл `Assets/CME/Sample/Extensions.cs` в вашем проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.
 
-Пример использования `CloudPurchaseClient` c `Unity IAP IStoreListener` для валидации платежей:
+Подробнее про работу с **Unity IAP** можно найти в [официальной документации](https://docs.unity3d.com/Manual/UnityIAP.html).
+
+Пример использования `CloudPurchaseClient` c **Unity IAP** для валидации платежей:
 
 ``` c#
 public class PurchaseProcessor : MonoBehaviour, IStoreListener
@@ -126,6 +128,8 @@ public class PurchaseProcessor : MonoBehaviour, IStoreListener
                 return googlePlayReceipt.AsValidationRequest(); // (4)
             }
         }
+        
+        throw new Exception("Can't create validation request!");
 #elif UNITY_IOS
         var validator = new CrossPlatformValidator(
             GooglePlayTangle.Data(),
@@ -136,7 +140,6 @@ public class PurchaseProcessor : MonoBehaviour, IStoreListener
 
         return purchasedProduct.AsAppleValidationRequest(); // (5)
 #endif
-        throw new Exception("Can't create validation request!");
     }
 }
 ```
