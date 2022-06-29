@@ -6,9 +6,10 @@
 
 **CME CloudPurchase** is a **Unity** extension for server-side processing of in-game payments in your **AWS** cloud environment.
 
-Основное отличие от подобных систем — полный контроль и значительная экономия за счет **модернового** подхода к развертыванию облака в **AWS**. Звучит интригующе и сложно? Мы подготовили подробные [инструкции](user_guide/getting_started.md) как завести и настроить новый аккаунт, а сам процесс разворачивания облачной инфраструктуры происходит из интерфейса Unity всего за пару кликов. 
+Its key difference from similar systems is complete control and significant cost savings thanks to a **cutting-edge** approach to cloud deployment in **AWS**. Sounds intriguing yet complicated? We have prepared step-by-step [instructions](user_guide/getting_started.md) on creating and setting up a new account, and the process of deploying cloud infrastructure can be done from the Unity interface in just a couple of clicks.
 
-В итоге вы получаете серверное решение развернутое в собственном облаке, без еще-одной-странной-подписки и с безграничными возможностями по расширению функционала!
+
+As a result, you get a server solution deployed in your own cloud without needing another questionable subscription and providing unlimited opportunities for functionality extension.
 
 **Topics**
 
