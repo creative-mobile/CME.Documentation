@@ -371,8 +371,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#environment-dashboard-overview" class="md-nav__link">
-     Environment dashboard overview
+  <a href="#dashboard-overview" class="md-nav__link">
+     Dashboard overview
   </a>
   
 </li>
@@ -385,8 +385,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#export-your-purchase-history" class="md-nav__link">
-     Export your purchase history
+  <a href="#exporting-to-the-csv" class="md-nav__link">
+     Exporting to the .csv
   </a>
   
 </li>
@@ -565,8 +565,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#environment-dashboard-overview" class="md-nav__link">
-     Environment dashboard overview
+  <a href="#dashboard-overview" class="md-nav__link">
+     Dashboard overview
   </a>
   
 </li>
@@ -579,8 +579,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#export-your-purchase-history" class="md-nav__link">
-     Export your purchase history
+  <a href="#exporting-to-the-csv" class="md-nav__link">
+     Exporting to the .csv
   </a>
   
 </li>
@@ -606,7 +606,7 @@
 <h1 id="usage-statistics-monitoring">Usage Statistics &amp; Monitoring</h1>
 <p>Базовый мониторинг платежей доступен с использованием возможностей AWS CloudWatch, а с помощью выгруженной в CSV истории можно проводить полнофункциональный анализ удобными вам инструментами.</p>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/dashboard-preview.jpg"><img alt="" src="../../assets/dashboard-preview.jpg" /></a></div></p>
-<h2 id="environment-dashboard-overview"><a id="dashboard"></a> Environment dashboard overview</h2>
+<h2 id="dashboard-overview"><a id="dashboard"></a> Dashboard overview</h2>
 <p>Для того, чтобы перейти к дашборду, нужно нажать кнопку <code>Open Environment Dashboard</code>. По умолчанию дашборд содержит разделы:</p>
 <ul>
 <li><code>Purchases Overview</code>. Показывает сумму платежей по дням. </li>
@@ -616,26 +616,18 @@
 </ul>
 <p>В правом верхнем углу находится элементы управления дашбордом. Здесь можно:</p>
 <ul>
-<li>
-<p>Изменить рассматриваемый период времени.
-<div class="lightgallery"><a data-sub-html="" href="../../assets/dashboard-time-control.jpg"><img alt="" src="../../assets/dashboard-time-control.jpg" /></a></div></p>
-</li>
-<li>
-<p>Изменить интервал обновления данных.
- <div class="lightgallery"><a data-sub-html="" href="../../assets/dashboard-refresh-control.jpg"><img alt="" src="../../assets/dashboard-refresh-control.jpg" /></a></div></p>
-</li>
-<li>
-<p>Добавить виджеты к дашборду, изменить имя дашборда, удалить дашборд и т.д.</p>
-</li>
+<li>Изменить рассматриваемый период времени.</li>
+<li>Изменить интервал обновления данных.</li>
+<li>Добавить виджеты к дашборду, изменить имя дашборда, удалить дашборд и т.д.</li>
 </ul>
-<p>Подробнее о работе с дашбордами в CloudWatch можно узнать <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html">здесь</a>.</p>
+<p>Подробнее о работе с дашбордами в CloudWatch можно узнать в <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html">официальной документации</a>.</p>
 <h2 id="sensetive-data"><a id="sensetive-data"></a> Sensetive data</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>В журнал платежей попадают персональные данные пользователя, а именно поле <a href="/api_reference/CME.CloudPurchase/#F-CME-CloudPurchase-ValidationRequest-UserId">UserId</a>. По-умолчанию, время хранения персональных данных составляет две недели.</p>
 </div>
 
-<h2 id="export-your-purchase-history"><a id="data-export"></a> Export your purchase history</h2>
+<h2 id="exporting-to-the-csv"><a id="data-export"></a> Exporting to the <code>.csv</code></h2>
 <p>В CloudWatch существует возможность экспортировать данные из виджета в <code>.csv</code> файл. Для того, чтобы это сделать нужно:</p>
 <ol>
 <li>Выбрать интересующий вас виджет. Нажать кнопку <code>View in CloudWatch Logs Insights</code>.</li>

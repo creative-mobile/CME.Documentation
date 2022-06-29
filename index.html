@@ -330,7 +330,7 @@
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    Overview
+     Overview
   </a>
   
 </li>
@@ -345,35 +345,35 @@
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    Проверка корректности платежей
+     Проверка корректности платежей
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Идентификация тестовых платежей
+     Идентификация тестовых платежей
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    Отслеживание истории платежей
+     Отслеживание истории платежей
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    Управление средами развертывания
+     Управление средами развертывания
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    Расширение и модификация
+     Расширение и модификация
   </a>
   
 </li>
@@ -634,7 +634,7 @@
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    Overview
+     Overview
   </a>
   
 </li>
@@ -649,35 +649,35 @@
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    Проверка корректности платежей
+     Проверка корректности платежей
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Идентификация тестовых платежей
+     Идентификация тестовых платежей
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    Отслеживание истории платежей
+     Отслеживание истории платежей
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    Управление средами развертывания
+     Управление средами развертывания
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    Расширение и модификация
+     Расширение и модификация
   </a>
   
 </li>
@@ -740,16 +740,11 @@
 
 
 <h1 id="what-is-cme-cloudpurchase">What is CME CloudPurchase?</h1>
-<h2 id="overview">Overview</h2>
+<p><img alt="CME CloudPurchase" src="assets/hero.png" /></p>
+<h2 id="overview"><a id="overview"></a> Overview</h2>
 <p><strong>CME CloudPurchase</strong> это расширение <strong>Unity</strong> для серверной обработки внутриигровых платежей в вашей собственной облачной среде <strong>AWS</strong>.</p>
-<p>Основное отличие от подобных систем - запуск серверной части на собственном аккаунте <strong>AWS</strong>. Звучит интригующе и сложно? Мы подготовили подробные <a href="user_guide/getting_started/#stores">инструкции</a> как завести и настроить новый аккаунт, а сам процесс разворачивания облачной инфраструктуры происходит из интерфейса Unity всего за пару кликов. </p>
-<p>В итоге вы получаете серверное решение развернутое в собственном облаке, без ежемесячных платежей за подписку и с безграничными возможностями по расширению функционала!
-<div class="lightgallery"><a data-sub-html="" href="../assets/architecture.jpg"><img alt="" src="../assets/architecture.jpg" /></a></div></p>
-<p>Расширение состоит из двух частей:</p>
-<ol>
-<li>Готовый к использованию C# код клиентской и серверной обработки платежей;</li>
-<li>Инструменты развертывания облачного приложения встроенные в <strong>Unity Editor</strong>.</li>
-</ol>
+<p>Основное отличие от подобных систем — полный контроль и значительная экономия за счет <strong>модернового</strong> подхода к развертыванию облака в <strong>AWS</strong>. Звучит интригующе и сложно? Мы подготовили подробные <a href="user_guide/getting_started/">инструкции</a> как завести и настроить новый аккаунт, а сам процесс разворачивания облачной инфраструктуры происходит из интерфейса Unity всего за пару кликов. </p>
+<p>В итоге вы получаете серверное решение развернутое в собственном облаке, без еще-одной-странной-подписки и с безграничными возможностями по расширению функционала!</p>
 <p><strong>Topics</strong></p>
 <ul>
 <li><a href="#features">CME CloudPurchase features</a></li>
@@ -757,22 +752,40 @@
 <li><a href="#costs">CME CloudPurchase costs</a></li>
 </ul>
 <h2 id="cme-cloudpurchase-features"><a id="features"></a> CME CloudPurchase features</h2>
-<h3 id="_1">Проверка корректности платежей</h3>
+<ul>
+<li><a href="#feature-1">Проверка корректности платежей</a></li>
+<li><a href="#feature-2">Идентификация тестовых платежей</a></li>
+<li><a href="#feature-3">Отслеживание истории платежей</a></li>
+<li><a href="#feature-4">Управление средами развертывания</a></li>
+<li><a href="#feature-5">Расширение и модификация</a></li>
+</ul>
+<h3 id="_1"><a id="feature-1"></a> Проверка корректности платежей</h3>
 <p>Для более надежного подтверждения корректности внутриигровых покупок <strong>CME CloudPurchase</strong> производит проверку используя специальные API для каждой из поддерживаемых платформ.</p>
 <p>На данный момент подерживаются <strong>Google Play Store</strong> и <strong>Apple App Store</strong>.</p>
 <p>Подробнее про интеграцию с платформами, смотрите раздел <a href="user_guide/getting_started/#stores">Getting Started / Configure stores integrations</a> в руководстве пользователя.</p>
-<h3 id="_2">Идентификация тестовых платежей</h3>
+<h3 id="_2"><a id="feature-2"></a> Идентификация тестовых платежей</h3>
 <p>Для обоснованного принятия решений <strong>CME CloudPurchase</strong> помогает отделить тестовые платежи, и, при возможности, повторные покупки.</p>
 <p>Подробнее о механике проверки платежей и работы, смотрите раздел <a href="user_guide/making_validation_requests/">Making Validation Requests</a> в руководстве разработчика.</p>
-<h3 id="_3">Отслеживание истории платежей</h3>
+<h3 id="_3"><a id="feature-3"></a> Отслеживание истории платежей</h3>
 <p>За счет специального формата логирования и метрик в <strong>Amazon CloudWatch</strong>, <strong>CME CloudPurchase</strong> позволяют наблюдать платежи в реальном времени, а так же выгрузить всю историю платежей для дальнейшего анализа.</p>
 <p>Подробнее о статистике использоваания и наблюдении облачного приложения, смотрите раздел <a href="user_guide/usage_statistics/">Usage Statistics and Monitoring</a> в руководстве пользователя.</p>
-<h3 id="_4">Управление средами развертывания</h3>
+<h3 id="_4"><a id="feature-4"></a> Управление средами развертывания</h3>
 <p>Для удобства проверки конфигурации облачного приложения <strong>CME CloudPurchase</strong> порзволяет переключаться между тестовой и основной средой эксплуатации прямо из <strong>Unity Editor</strong>.</p>
 <p>Подробнее о развертывании в облаке, смотрите раздел <a href="user_guide/managing_cloud_environments/">Managing Cloud Environments</a> в руководстве разработчика.</p>
-<h3 id="_5">Расширение и модификация</h3>
-<p>Для "бесшовной" интеграции с логикой вашего приложения вся runtime логика подробно документирована и открыта к адаптации.</p>
+<h3 id="_5"><a id="feature-5"></a> Расширение и модификация</h3>
+<p>Для "бесшовной" интеграции с логикой вашего приложения практически вся логика в <code>Assets/CME</code> подробно документирована и открыта к адаптации. </p>
+<p>Облачная логика организована в специальный solution <code>Cloud/Cloud.sln</code> организована в проекты </p>
+<ul>
+<li><code>CME.CloudPurchase/CME.CloudPurchase.csproj</code> содержащий runtime логику серверного приложения.</li>
+<li><code>CME.CloudDefinition/CME.CloudDefinition.csproj</code> содержащий логику развертывания облачной инфраструктуры.</li>
+</ul>
 <h2 id="how-cme-cloudpurchase-works"><a id="how-it-works"></a> How CME CloudPurchase works</h2>
+<p><div class="lightgallery"><a data-sub-html="" href="assets/architecture.jpg"><img alt="" src="assets/architecture.jpg" /></a></div></p>
+<p>Расширение состоит из двух частей:</p>
+<ol>
+<li>Готовый к использованию C# код клиентской и серверной обработки платежей;</li>
+<li>Инструменты развертывания облачного приложения встроенные в <strong>Unity Editor</strong>.</li>
+</ol>
 <p>Обработка каждого платежа в рамках сценария совершения покупки происходит за счет вызова к <strong>облачному приложению</strong> развернутого в выбранной <strong>среде</strong>.</p>
 <p>Вызов производиться с использованием <a href="api_reference/namespaces.md">клиентской библиотеки</a> встраиваемой в игру.</p>
 <p>Выбор среды производится в специальном окне расширения <strong>Unity Editor</strong> перед сборкой или запуском приложения.</p>

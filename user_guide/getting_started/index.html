@@ -343,13 +343,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-the-unity-plugin" class="md-nav__link">
-     Install the Unity plugin
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#get-your-aws-security-credentials" class="md-nav__link">
      Get your AWS security credentials
   </a>
@@ -585,13 +578,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-the-unity-plugin" class="md-nav__link">
-     Install the Unity plugin
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#get-your-aws-security-credentials" class="md-nav__link">
      Get your AWS security credentials
   </a>
@@ -644,33 +630,31 @@
 
 
 <h1 id="getting-started-with-cme-cloudpurchase">Getting Started with CME CloudPurchase</h1>
-<p>Установка CME CloudPurchase довольно проста и состоит из следующих шагов:</p>
+<p>Установка <strong>CME CloudPurchase</strong> довольно проста и состоит из следующих шагов:</p>
 <ol>
-<li>Установить <a href="#install">Unity плагин</a>.</li>
+<li>Установить плагин из <a href="https://assetstore.unity.com/preview/224332/710152">Unity Asset Store</a>.</li>
 <li>Получить <a href="#aws-credentials">AWS Credentials</a>.</li>
 <li>Выполнить <a href="#deployment">первый деплой</a>.</li>
 <li>Сконфигурировать <a href="#stores">ключи доступа</a> к Google Developer Console.</li>
 </ol>
-<h2 id="install-the-unity-plugin"><a id="install"></a> Install the Unity plugin</h2>
-<p>Актуальная версия CME CloudPurchase находится в <a href="https://assetstore.unity.com/preview/224332/710152">Unity Asset Store</a>, при желании можно воспользоваться <a href="https://assetstore.unity.com/preview/224130/709634">пробной версией</a>.</p>
-<p>Хороший мануал по установки unity плагинов есть на <a href="https://docs.unity3d.com/Manual/AssetPackagesPurchase.html" target="_blank">сайте</a> официальной документации Unity.</p>
 <h2 id="get-your-aws-security-credentials"><a id="aws-credentials"></a> Get your AWS security credentials</h2>
-<p>Если у вас еще нету аккаунта в AWS, то рекомендуем выполнить шаги <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/" target="_blank">официального руководства</a>.</p>
+<p>Если у вас еще нету аккаунта в <strong>AWS</strong>, то рекомендуем выполнить шаги <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/" target="_blank">официального руководства</a>.</p>
 <p>В случае, если аккаунт уже есть то можно переходить к получению ключей доступа.</p>
 <h3 id="generating-security-credentials">Generating security credentials</h3>
-<p>Для получения ключей доступа перейите в раздел <a href="https://console.aws.amazon.com/iamv2/home" target="_blank">Identity and Access Management</a> и выполните следующие действия:</p>
+<p>Для получения ключей доступа перейите в раздел <a href="hhttps://us-east-1.console.aws.amazon.com/iam/home#/security_credentials" target="_blank">Identity and Access Management | Your Security Credentials</a> и получите ключ доступа, выполнив следующие действия:</p>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/get_aws_creds.gif"><img alt="" src="../../assets/get_aws_creds.gif" /></a></div></p>
 <h2 id="make-your-first-deployment"><a id="deployment"></a> Make your first deployment</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Без конфигурации <a href="#stores">ключей доступа</a> к Google Developer Console нет возможности проверять патежи в Google Play Store, поэтому проверка может выдавать ошибку:</p>
-<img src="/assets/google-creds-error.jpg">
+<p>Без конфигурации <a href="#stores">ключей доступа</a> к <b>Google Developer Console</b> нет возможности проверять патежи в <b>Google Play Store</b>, поэтому проверка может выдавать ошибку:</p>
+<img src="../assets/google-creds-error.jpg">
 </div>
 
-<p>Теперь вы готовы развернуть свое первое CME CloudPurchase приложения, для этого откройте Unity Editor преокт с установленным плагинов и выполните следующие действия:</p>
+<p>Теперь вы готовы развернуть свое первое <strong>CME CloudPurchase</strong> приложение, для этого откройте <strong>Unity Editor</strong> с установленным плагинов и нажмите на кнопку <strong>Deploy</strong>:</p>
 <p><img alt="" src="../../assets/first%20deploy.gif" /></p>
+<p>Вероятнее всего, вам прийдется установить сгенерированные ключи доступа AWS в открывшийся файл <code>.aws/credentials</code> в вашей домашней директории. Подробнее про него можно прочитать в <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html">официальной документации</a>.</p>
 <h2 id="configure-stores-integrations"><a id="stores"></a> Configure stores integrations</h2>
-<p>Для получения ключей доступа к Google Developer Console необходимо перейти в <a href="https://play.google.com/console/" target="_blank">Google Play Console</a> и выполните следующие действия:</p>
+<p>Для получения ключей доступа к <strong>Google Developer Console</strong> необходимо перейти в <a href="https://play.google.com/console/" target="_blank">Google Play Console</a> и выполните следующие действия:</p>
 <ol>
 <li>
 <p>Создайте сервисный аккаунт.
@@ -685,7 +669,7 @@
 <div class="lightgallery"><a data-sub-html="" href="../../assets/google_3.gif"><img alt="" src="../../assets/google_3.gif" /></a></div></p>
 </li>
 </ol>
-<p>Подробнее о процессе создания и настройки сервисного аккаунта можно узнать <a href="https://developers.google.com/workspace/guides/create-credentials#service-account" target="_blank">здесь</a>.</p>
+<p>Подробнее о процессе создания и настройки сервисного аккаунта можно узнать <a href="https://developers.google.com/workspace/guides/create-credentials#service-account" target="_blank">в официальной документации</a>.</p>
 
               
             </article>

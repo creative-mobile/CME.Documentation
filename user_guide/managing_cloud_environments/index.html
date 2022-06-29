@@ -392,8 +392,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-deployment" class="md-nav__link">
-     Test Deployment
+  <a href="#make-test-purchase" class="md-nav__link">
+     Make Test Purchase
   </a>
   
 </li>
@@ -680,8 +680,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-deployment" class="md-nav__link">
-     Test Deployment
+  <a href="#make-test-purchase" class="md-nav__link">
+     Make Test Purchase
   </a>
   
 </li>
@@ -764,8 +764,8 @@
 
 
 <h1 id="managing-cloud-environments">Managing Cloud Environments</h1>
-<p>Управление AWS окружением и его деплоем, а также настройка плагина осуществляются прямо из Unity при помощи окна Control Panel.</p>
-<p>Чтобы открыть <code>Control Panel</code> нажмите <code>CME -&gt; Cloud Purchase -&gt; Control Panel</code>. После этого откроется окно Control Panel.</p>
+<p>Управление <strong>AWS</strong> окружением и его деплоем, а также настройка плагина осуществляются прямо из <strong>Unity</strong> при помощи окна <strong>Control Panel</strong>.</p>
+<p>Чтобы открыть <strong>Control Panel</strong> нажмите <code>CME -&gt; Cloud Purchase -&gt; Show Control Panel</code>. После этого откроется окно <strong>Control Panel</strong>.</p>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/open-control-panel.gif"><img alt="" src="../../assets/open-control-panel.gif" /></a></div></p>
 <h2 id="control-panel-overview"><a id="control-panel"></a> Control Panel Overview</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-overview.JPG"><img alt="" src="../../assets/control-panel-overview.JPG" style="height:547px;width:322px" /></a></div></p>
@@ -775,7 +775,7 @@
 <p>Кнопка <code>Deploy \ Update Deployment</code> разворачивает выбранное окружение в AWS с текущими настройками или обновляет его, если оно уже было развернуто ранее.</p>
 <h2 id="inspection">Inspection</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-inspection.JPG"><img alt="" src="../../assets/control-panel-inspection.JPG" style="height:547px;width:322px" /></a></div></p>
-<h3 id="test-deployment"><a id="make-test-purchase"></a> Test Deployment</h3>
+<h3 id="make-test-purchase"><a id="make-test-purchase"></a> Make Test Purchase</h3>
 <p>Кнопка <code>Make Test Purchase</code> позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на <a href="#environment-dashboard">дашборде</a>.</p>
 <h3 id="environment-dashboard"><a id="environment-dashboard"></a> Environment Dashboard</h3>
 <p>Кнопка <code>Open Environment Dashboard</code> открывает в браузере дашборд в Amazon CloudWatch, на котором собрана информация о платежах на выбранном окружении.
@@ -783,16 +783,16 @@
 <h2 id="configuration">Configuration</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-configuration.JPG"><img alt="" src="../../assets/control-panel-configuration.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="edit-aws-profile"><a id="edit-aws-profile"></a> Edit AWS Profile</h3>
-<p>Кнопка <code>Edit AWS Profile</code> открывает <code>credentials</code> файл, где описываются credentials для AWS сервисов. 
+<p>Кнопка <code>Edit AWS Profile</code> открывает <code>credentials</code> файл, где описываются credentials для <strong>AWS</strong> сервисов. 
 Пример того, как выглядят credentials описан ниже:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[cme-cloud-deploy]
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>aws_access_key_id     = AKIAXXXX1XXXXXX1XX1X
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>region                = us-east-1
 </code></pre></div></p>
-<p>Подробнее о том, что такое AWS credentials можно узнать <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html" target="_blank">здесь</a>, а о том, как получить AWS credentials <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-your-credentials.html" target="_blank">здесь</a>.</p>
+<p>Подробнее о том, что такое <strong>AWS Security Credentials</strong> можно узнать в <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html" target="_blank">официальной документции</a>, а то, как из получить прекрасно описано в разделе <a href="../getting_started/">Getting Started</a>.</p>
 <h3 id="setedit-google-credentials"><a id="edit-google-credentials"></a> Set\Edit Google Credentials</h3>
-<p>Кнопка <code>Set\Edit Google Credentials</code> открывает <code>GoogleCredentials.json</code> файл, где описываются credentials для Google API. Подробнее о том, как создать сервисный аккаунт Google и получить credentials <a href="https://developers.google.com/workspace/guides/create-credentials#service-account" target="_blank">здесь</a>.</p>
+<p>Кнопка <code>Set\Edit Google Credentials</code> открывает <code>GoogleCredentials.json</code> файл, где описываются credentials для <strong>Google API</strong>. Подробнее о том, как создать сервисный аккаунт Google и получить credentials узнать в <a href="https://developers.google.com/workspace/guides/create-credentials#service-account" target="_blank">официальной документации</a>.</p>
 <h2 id="danger-zone">Danger Zone</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-danger-zone.JPG"><img alt="" src="../../assets/control-panel-danger-zone.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="destroy-environment"><a id="destroy-environment"></a> Destroy Environment</h3>
