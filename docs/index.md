@@ -15,23 +15,24 @@ As a result, you get a server solution deployed in your own cloud without needin
 
 - [CME CloudPurchase features](#features)
 - [How CME CloudPurchase works](#how-it-works)
-- [CME CloudPurchase costs](#costs)
+- [CME CloudPurchase pricing](#pricing)
 
 ## <a id="features"></a> CME CloudPurchase features
 
-- [Проверка корректности платежей](#feature-1)
-- [Идентификация тестовых платежей](#feature-2)
-- [Отслеживание истории платежей](#feature-3)
-- [Управление средами развертывания](#feature-4)
-- [Расширение и модификация](#feature-5)
+- [Verification of payments' correctness](#feature-1)
+- [Test payment identification](#feature-2)
+- [Tracking payment history](#feature-3)
+- [Managing deployment environments](#feature-4)
+- [Extension and modification](#feature-5)
 
-### <a id="feature-1"></a> Проверка корректности платежей
+### <a id="feature-1"></a> Verification of payments' correctness
 
-Для более надежного подтверждения корректности внутриигровых покупок **CME CloudPurchase** производит проверку используя специальные API для каждой из поддерживаемых платформ.
+**CME CloudPurchase** performs verification using special APIs for each of the supported platforms to more reliably confirm the correctness of in-game purchases.
 
-На данный момент подерживаются **Google Play Store** и **Apple App Store**.
+**CME CloudPurchase** currently supports the **Google Play Store** and **Apple App Store**.
 
-Подробнее про интеграцию с платформами, смотрите раздел [Getting Started / Configure stores integrations](user_guide/getting_started.md#stores) в руководстве пользователя.
+See the [Getting Started / Configure Stores Integrations](user_guide/getting_started.md#stores) section in the User Manual for more information on platform integration.
+
 
 ### <a id="feature-2"></a> Идентификация тестовых платежей
 
