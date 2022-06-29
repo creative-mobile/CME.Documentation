@@ -34,25 +34,26 @@ As a result, you get a server solution deployed in your own cloud without needin
 See the [Getting Started / Configure Stores Integrations](user_guide/getting_started.md#stores) section in the User Manual for more information on platform integration.
 
 
-### <a id="feature-2"></a> Идентификация тестовых платежей
+### <a id="feature-2"></a> Test payment identification
 
-Для обоснованного принятия решений **CME CloudPurchase** помогает отделить тестовые платежи, и, при возможности, повторные покупки.
+**CME CloudPurchase** helps to separate test payments and, if possible, repeat purchases for informed decision-making.
 
-Подробнее о механике проверки платежей и работы, смотрите раздел [Making Validation Requests](user_guide/making_validation_requests.md) в руководстве разработчика.
+See the [Making Validation Requests](user_guide/making_validation_requests.md) section in the Developer's Guide for more details on payment verification and operation mechanics.
 
-### <a id="feature-3"></a> Отслеживание истории платежей
 
-За счет специального формата логирования и метрик в **Amazon CloudWatch**, **CME CloudPurchase** позволяют наблюдать платежи в реальном времени, а так же выгрузить всю историю платежей для дальнейшего анализа.
+### <a id="feature-3"></a> Tracking payment history
 
-Подробнее о статистике использоваания и наблюдении облачного приложения, смотрите раздел [Usage Statistics and Monitoring](user_guide/usage_statistics.md) в руководстве пользователя.
+Thanks to a unique system of logging and metrics in **Amazon CloudWatch**, **CME CloudPurchase** allows you to monitor payments in real time and upload the entire payment history for further analysis.
 
-### <a id="feature-4"></a> Управление средами развертывания
+See the [Usage Statistics and Monitoring](user_guide/usage_statistics.md) section in the User Manual for more information on cloud application usage statistics and monitoring.
 
-Для удобства проверки конфигурации облачного приложения **CME CloudPurchase** порзволяет переключаться между тестовой и основной средой эксплуатации прямо из **Unity Editor**.
+### <a id="feature-4"></a> Managing deployment environments
 
-Подробнее о развертывании в облаке, смотрите раздел [Managing Cloud Environments](user_guide/managing_cloud_environments.md) в руководстве разработчика.
+**CME CloudPurchase** allows you to switch between the test and main operating environments directly from the **Unity Editor** to easily check your cloud application's configuration.
 
-### <a id="feature-5"></a> Расширение и модификация
+See the [Managing Cloud Environments](user_guide/managing_cloud_environments.md) section of the Developer's Guide for more information on cloud deployment.
+
+### <a id="feature-5"></a> Extension and modification
 
 Для "бесшовной" интеграции с логикой вашего приложения практически вся логика в `Assets/CME` подробно документирована и открыта к адаптации. 
 
