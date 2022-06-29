@@ -17,6 +17,10 @@
 <a name='T-CME-CloudPurchase-CloudPurchaseClient'></a>
 ## CloudPurchaseClient `type`
 
+### Implements 
+
+[IDisposable](https://docs.microsoft.com/en-gb/dotnet/api/system.idisposable?view=net-6.0){target=_blank}
+
 ### Summary
 
 Client for validating purchases.
