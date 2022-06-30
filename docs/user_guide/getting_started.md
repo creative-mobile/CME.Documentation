@@ -9,13 +9,13 @@ Installing **CME CloudPurchase** is pretty straightforward and consists of the f
 
 ## <a id="aws-credentials"></a> Get your AWS security credentials
 
-If you do not yet have an **AWS** account, we recommend following the instructions in the [official manual](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/){target=_blank}.
+If you do not yet have an **AWS** account, we recommend following the instructions in the [official manual](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
 
 If you already have an account, you can move on to getting the access keys.
 
 ### Generating security credentials
 
-For access keys, go to [Identity and Access Management | Your Security Credentials](hhttps://us-east-1.console.aws.amazon.com/iam/home#/security_credentials){target=_blank} and get an access key by following the steps below:
+For access keys, go to [Identity and Access Management | Your Security Credentials](hhttps://us-east-1.console.aws.amazon.com/iam/home#/security_credentials) and get an access key by following the steps below:
 
 ![!](../assets/get_aws_creds.gif)
 
@@ -31,11 +31,11 @@ You are now ready to deploy your first **CME CloudPurchase** application. To do 
 
 ![](../assets/first deploy.gif)
 
-Вероятнее всего, вам прийдется установить сгенерированные ключи доступа AWS в открывшийся файл `.aws/credentials` в вашей домашней директории. You will most likely have to install the generated AWS access keys into the opened '.aws/credentials' file in your home directory. See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) for more details. 
+You will most likely have to install the generated AWS access keys into the opened '.aws/credentials' file in your home directory. See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) for more details. 
 
 ## <a id="stores"></a> Configuring stores integrations
 
-For access keys to **Google Developer Console**, go to [Google Play Console](https://play.google.com/console/){target=_blank} and follow the steps below: 
+For access keys to **Google Developer Console**, go to [Google Play Console](https://play.google.com/console/) and follow the steps below: 
 
 1. Set up a service account.
 ![!](../assets/google_1.gif)
@@ -46,4 +46,4 @@ For access keys to **Google Developer Console**, go to [Google Play Console](htt
 3. Set up the necessary permissions for the account.
 ![!](../assets/google_3.gif)
 
-See the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank} for more information on the process of creating and setting up a service account.
+See the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account) for more information on the process of creating and setting up a service account.
