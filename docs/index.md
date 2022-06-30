@@ -55,40 +55,40 @@ See the [Managing Cloud Environments](user_guide/managing_cloud_environments.md)
 
 ### <a id="feature-5"></a> Extension and modification
 
-Для "бесшовной" интеграции с логикой вашего приложения практически вся логика в `Assets/CME` подробно документирована и открыта к адаптации. 
+Almost all of the logic in Assets/CME is extensively documented and available for adaptation for seamless integration with your application's logic. 
 
 Облачная логика организована в специальный solution `Cloud/Cloud.sln` организована в проекты 
 
-- `CME.CloudPurchase/CME.CloudPurchase.csproj` содержащий runtime логику серверного приложения.
-- `CME.CloudDefinition/CME.CloudDefinition.csproj` содержащий логику развертывания облачной инфраструктуры.
+- `CME.CloudPurchase/CME.CloudPurchase.csproj` containing the runtime logic of the server application.
+- `CME.CloudDefinition/CME.CloudDefinition.csproj` containing the logic for deploying a cloud infrastructure.
 
 ## <a id="how-it-works"></a> How CME CloudPurchase works
 
 ![!](assets/architecture.jpg)
 
-Расширение состоит из двух частей:
+The extension consists of two elements: 
 
-1. Готовый к использованию C# код клиентской и серверной обработки платежей;
-2. Инструменты развертывания облачного приложения встроенные в **Unity Editor**.
+1. Ready-to-use C# code for client and server payment processing;
+2. Cloud application deployment tools built into **Unity Editor**.
 
-Обработка каждого платежа в рамках сценария совершения покупки происходит за счет вызова к **облачному приложению** развернутого в выбранной **среде**.
+Each payment in the purchase scenario is processed by sending a request to the **cloud application** deployed in the chosen **environment**.
 
-Вызов производиться с использованием [клиентской библиотеки](api_reference/namespaces.md) встраиваемой в игру.
+The request is made using the [client library](api_reference/namespaces.md) integrated into the game. 
 
-Выбор среды производится в специальном окне расширения **Unity Editor** перед сборкой или запуском приложения.
+The environment is selected in the special **Unity Editor** extension window before building or running the application.
 
-### Облачное приложение
+### Cloud application
 
-Облачное приложение это набор связанных компонетов **AWS** минимально необходимых для проверки, хранения и наблюдения истории платежей.
+A cloud application is a set of related **AWS** components required for checking, storing, and monitoring payment history.
 
-### Среда развертывания
+### Deployment environment
 
-Приложение разделено на именованные среды для возможности безопасного тестирования конфигураций и расширений облачного приложения.
+The application is divided into named environments to enable secure testing of cloud application configurations and extensions.
 
-## <a id="costs"></a> CME CloudPurchase costs
+## <a id="pricing"></a> CME CloudPurchase pricing
 
-**CME CloudPurchase** очень экономно использует ресурсы **AWS** и [попадает с большым запасом](https://calculator.aws/#/estimate?id=173c99261f287852c34cb50214c1fe6c34f4e14b){target=_blank} в ограничения **AWS Free Tier**.
+**CME CloudPurchase** uses **AWS** resources very efficiently and is [fully compliant](https://calculator.aws/#/estimate?id=173c99261f287852c34cb50214c1fe6c34f4e14b){target=_blank} with the **AWS Free Tier** terms of use.
 
-Поэтому при использовании [триальной версии](https://assetstore.unity.com/preview/224130/709634){target=_blank} **CME CloudPurchase** будет для вас полностью бесплатен.
+That is why the [trial version](https://assetstore.unity.com/preview/224130/709634){target=_blank} of **CME CloudPurchase** will be completely free for you.
 
-При невозможности использовать **AWS Free Tier** стоимсть эксплуалтации [остается крайне эффективной](https://calculator.aws/#/estimate?id=4146e963f41967449d736e1a9b1d80cadda074a1){target=_blank}. 
+Should it be impossible to use **AWS Free Tier**, the operating cost [is still highly competitive](https://calculator.aws/#/estimate?id=4146e963f41967449d736e1a9b1d80cadda074a1){target=_blank} is still highly competitive.
