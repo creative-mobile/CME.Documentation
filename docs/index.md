@@ -56,10 +56,10 @@ See the [Managing Cloud Environments](user_guide/managing_cloud_environments.md)
 
 Almost all of the logic in Assets/CME is extensively documented and available for adaptation for seamless integration with your application's logic. 
 
-Облачная логика организована в специальный solution `Cloud/Cloud.sln` организована в проекты 
+The cloud logic is arranged in'Cloud/Cloud.sln', a special solution in the projects.
 
-- `CME.CloudPurchase/CME.CloudPurchase.csproj` containing the runtime logic of the server application.
-- `CME.CloudDefinition/CME.CloudDefinition.csproj` containing the logic for deploying a cloud infrastructure.
+- 'CME.CloudPurchase/CME.CloudPurchase.csproj' containing the runtime logic of the server application.
+- 'CME.CloudDefinition/CME.CloudDefinition.csproj' containing the logic for deploying a cloud infrastructure.
 
 ## <a id="how-it-works"></a> How CME CloudPurchase works
 
