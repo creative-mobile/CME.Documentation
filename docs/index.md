@@ -4,53 +4,56 @@
 
 ## <a id="overview"></a> Overview
 
-**CME CloudPurchase** это расширение **Unity** для серверной обработки внутриигровых платежей в вашей собственной облачной среде **AWS**.
+**CME CloudPurchase** is a **Unity** extension for server-side processing of in-game payments in your **AWS** cloud environment.
 
-Основное отличие от подобных систем — полный контроль и значительная экономия за счет **модернового** подхода к развертыванию облака в **AWS**. Звучит интригующе и сложно? Мы подготовили подробные [инструкции](user_guide/getting_started.md) как завести и настроить новый аккаунт, а сам процесс разворачивания облачной инфраструктуры происходит из интерфейса Unity всего за пару кликов. 
+Its key difference from similar systems is complete control and significant cost savings thanks to a **cutting-edge** approach to cloud deployment in **AWS**. Sounds intriguing yet complicated? We have prepared step-by-step [instructions](user_guide/getting_started.md) on creating and setting up a new account, and the process of deploying cloud infrastructure can be done from the Unity interface in just a couple of clicks.
 
-В итоге вы получаете серверное решение развернутое в собственном облаке, без еще-одной-странной-подписки и с безграничными возможностями по расширению функционала!
+
+As a result, you get a server solution deployed in your own cloud without needing another questionable subscription and providing unlimited opportunities for functionality extension.
 
 **Topics**
 
 - [CME CloudPurchase features](#features)
 - [How CME CloudPurchase works](#how-it-works)
-- [CME CloudPurchase costs](#costs)
+- [CME CloudPurchase pricing](#pricing)
 
 ## <a id="features"></a> CME CloudPurchase features
 
-- [Проверка корректности платежей](#feature-1)
-- [Идентификация тестовых платежей](#feature-2)
-- [Отслеживание истории платежей](#feature-3)
-- [Управление средами развертывания](#feature-4)
-- [Расширение и модификация](#feature-5)
+- [Verification of payments' correctness](#feature-1)
+- [Test payment identification](#feature-2)
+- [Tracking payment history](#feature-3)
+- [Managing deployment environments](#feature-4)
+- [Extension and modification](#feature-5)
 
-### <a id="feature-1"></a> Проверка корректности платежей
+### <a id="feature-1"></a> Verification of payments' correctness
 
-Для более надежного подтверждения корректности внутриигровых покупок **CME CloudPurchase** производит проверку используя специальные API для каждой из поддерживаемых платформ.
+**CME CloudPurchase** performs verification using special APIs for each of the supported platforms to more reliably confirm the correctness of in-game purchases.
 
-На данный момент подерживаются **Google Play Store** и **Apple App Store**.
+**CME CloudPurchase** currently supports the **Google Play Store** and **Apple App Store**.
 
-Подробнее про интеграцию с платформами, смотрите раздел [Getting Started / Configure stores integrations](user_guide/getting_started.md#stores) в руководстве пользователя.
+See the [Getting Started / Configure Stores Integrations](user_guide/getting_started.md#stores) section in the User Manual for more information on platform integration.
 
-### <a id="feature-2"></a> Идентификация тестовых платежей
 
-Для обоснованного принятия решений **CME CloudPurchase** помогает отделить тестовые платежи, и, при возможности, повторные покупки.
+### <a id="feature-2"></a> Test payment identification
 
-Подробнее о механике проверки платежей и работы, смотрите раздел [Making Validation Requests](user_guide/making_validation_requests.md) в руководстве разработчика.
+**CME CloudPurchase** helps to separate test payments and, if possible, repeat purchases for informed decision-making.
 
-### <a id="feature-3"></a> Отслеживание истории платежей
+See the [Making Validation Requests](user_guide/making_validation_requests.md) section in the Developer's Guide for more details on payment verification and operation mechanics.
 
-За счет специального формата логирования и метрик в **Amazon CloudWatch**, **CME CloudPurchase** позволяют наблюдать платежи в реальном времени, а так же выгрузить всю историю платежей для дальнейшего анализа.
 
-Подробнее о статистике использоваания и наблюдении облачного приложения, смотрите раздел [Usage Statistics and Monitoring](user_guide/usage_statistics.md) в руководстве пользователя.
+### <a id="feature-3"></a> Tracking payment history
 
-### <a id="feature-4"></a> Управление средами развертывания
+Thanks to a unique system of logging and metrics in **Amazon CloudWatch**, **CME CloudPurchase** allows you to monitor payments in real time and upload the entire payment history for further analysis.
 
-Для удобства проверки конфигурации облачного приложения **CME CloudPurchase** порзволяет переключаться между тестовой и основной средой эксплуатации прямо из **Unity Editor**.
+See the [Usage Statistics and Monitoring](user_guide/usage_statistics.md) section in the User Manual for more information on cloud application usage statistics and monitoring.
 
-Подробнее о развертывании в облаке, смотрите раздел [Managing Cloud Environments](user_guide/managing_cloud_environments.md) в руководстве разработчика.
+### <a id="feature-4"></a> Managing deployment environments
 
-### <a id="feature-5"></a> Расширение и модификация
+**CME CloudPurchase** allows you to switch between the test and main operating environments directly from the **Unity Editor** to easily check your cloud application's configuration.
+
+See the [Managing Cloud Environments](user_guide/managing_cloud_environments.md) section of the Developer's Guide for more information on cloud deployment.
+
+### <a id="feature-5"></a> Extension and modification
 
 Для "бесшовной" интеграции с логикой вашего приложения практически вся логика в `Assets/CME` подробно документирована и открыта к адаптации. 
 
