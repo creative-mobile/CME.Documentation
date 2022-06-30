@@ -31,19 +31,19 @@ You are now ready to deploy your first **CME CloudPurchase** application. To do 
 
 ![](../assets/first deploy.gif)
 
-Вероятнее всего, вам прийдется установить сгенерированные ключи доступа AWS в открывшийся файл `.aws/credentials` в вашей домашней директории. Подробнее про него можно прочитать в [официальной документации](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
+Вероятнее всего, вам прийдется установить сгенерированные ключи доступа AWS в открывшийся файл `.aws/credentials` в вашей домашней директории. You will most likely have to install the generated AWS access keys into the opened '.aws/credentials' file in your home directory. See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) for more details. 
 
-## <a id="stores"></a> Configure stores integrations
+## <a id="stores"></a> Configuring stores integrations
 
-Для получения ключей доступа к **Google Developer Console** необходимо перейти в [Google Play Console](https://play.google.com/console/){target=_blank} и выполните следующие действия:
+For access keys to **Google Developer Console**, go to [Google Play Console](https://play.google.com/console/){target=_blank} and follow the steps below: 
 
-1. Создайте сервисный аккаунт.
+1. Set up a service account.
 ![!](../assets/google_1.gif)
 
-2. Создайте новый приватный ключ.
+2. Generate a new private key.
 ![!](../assets/google_2.gif)
 
-3. Выдайте необходимые разрешения для аккаунта.
+3. Set up the necessary permissions for the account.
 ![!](../assets/google_3.gif)
 
-Подробнее о процессе создания и настройки сервисного аккаунта можно узнать [в официальной документации](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
+See the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank} for more information on the process of creating and setting up a service account.
