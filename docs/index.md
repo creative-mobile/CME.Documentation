@@ -8,8 +8,7 @@
 
 Its key difference from similar systems is complete control and significant cost savings thanks to a **cutting-edge** approach to cloud deployment in **AWS**. Sounds intriguing yet complicated? We have prepared step-by-step [instructions](user_guide/getting_started.md) on creating and setting up a new account, and the process of deploying cloud infrastructure can be done from the Unity interface in just a couple of clicks.
 
-
-As a result, you get a server solution deployed in your own cloud without needing another questionable subscription and providing unlimited opportunities for functionality extension.
+As a result, you get a server solution deployed in your own cloud, enjoy unlimited opportunities for functionality extension, and don't need to get a yet-another-weird subscription.
 
 **Topics**
 
@@ -91,4 +90,4 @@ The application is divided into named environments to enable secure testing of c
 
 That is why the [trial version](https://assetstore.unity.com/preview/224130/709634) of **CME CloudPurchase** will be completely free for you.
 
-Should it be impossible to use **AWS Free Tier**, the operating cost [is still highly competitive](https://calculator.aws/#/estimate?id=4146e963f41967449d736e1a9b1d80cadda074a1) is still highly competitive.
+Should it be impossible to use **AWS Free Tier**, the operating cost [is still highly competitive](https://calculator.aws/#/estimate?id=4146e963f41967449d736e1a9b1d80cadda074a1).
