@@ -5,7 +5,7 @@ When installing **CME CloudPurchase**, you will find the file 'Assets/CME/Sample
 The payment verification process with **CME CloudPurchase** is pretty simple. Basically it is all about creating an instance [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) and using its [`Validate`] method (. ./api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). See the examples of usage below.
 
 ## <a id="client"></a> Using CloudPurchaseClient
-Example of using `CloudPurchaseClient` to validate payments:
+Example of using 'CloudPurchaseClient' to validate payments:
 
 ``` c#
 public async Task Validate()
@@ -50,7 +50,7 @@ public async Task Validate()
 
 ## <a id="unity-iap"></a> Unity IAP IStoreListener
 
-If you want to use 'CloudPurchaseClient' along with **Unity IAP**, first find the file `Assets/CME/Sample/Extensions.cs` in your project and uncomment it. It is required to use the appropriate extension methods.
+If you want to use 'CloudPurchaseClient' along with **Unity IAP**, first find the file 'Assets/CME/Sample/Extensions.cs' in your project and uncomment it. It is required to use the appropriate extension methods.
 
 For more details on working with **Unity IAP**, see the [official userguide](https://docs.unity3d.com/Manual/UnityIAP.html).
 
