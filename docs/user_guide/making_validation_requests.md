@@ -41,11 +41,11 @@ public async Task Validate()
 }
 ```
 
-1. Create `CloudPurchaseClient` instance for validation
-2. Create validation request directly
-3. Set `UserId` to investigate logs and solve possible user problems. **Warning:** this is personal data, see details [here](usage_statistics.md#sensetive-data).
-4. Set `PriceUsdCents` for analytics and revenue diagrams in [dashboard](usage_statistics.md).
-5. It means that purchase is good.
+1. Create 'CloudPurchaseClient' instance for validation.
+2. Create validation request directly.
+3. Set 'UserId' to study the logs and solve potential user problems. **Warning:** This is personal data, for more information see [here](usage_statistics.md#sensetive-data).
+4. Set `PriceUsdCents` for analytics and revenue diagrams in the [dashboard](usage_statistics.md).
+5. It means that the purchase is good.
 
 
 ## <a id="unity-iap"></a> Unity IAP IStoreListener
