@@ -30,7 +30,7 @@ As a result, you get a server solution deployed in your own cloud, enjoy unlimit
 
 **CME CloudPurchase** currently supports the **Google Play Store** and **Apple App Store**.
 
-See the [Getting Started / Configure Stores Integrations](user_guide/getting_started.md#stores) section in the User Guide for more information on platform integration.
+See the [Getting Started / Configuring Stores Integrations](user_guide/getting_started.md#stores) section in the User Guide for more information on platform integration.
 
 
 ### <a id="feature-2"></a> Test payment identification
