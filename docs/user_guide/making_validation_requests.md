@@ -1,11 +1,11 @@
 # Making Validation Requests
 
-При установке **CME CloudPurchase** в вашем Unity проекте появится файл `Assets/CME/Sample/CloudPurchaseSample.cs` в котором есть примеры использования `CloudPurchaseClient`.
+When installing **CME CloudPurchase**, you will find the file 'Assets/CME/Sample/CloudPurchaseSample.cs' in your Unity project containing examples of how to use 'CloudPurchaseClient'.
 
-Процесс проверки платежей с помощью **CME CloudPurchase** довольно прост. По-сути, все сводится к созданию инстанса [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) и использованию его метода [`Validate`](../api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). Примеры использования можно видеть ниже.
+The payment verification process with **CME CloudPurchase** is pretty simple. Basically it is all about creating an instance [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) and using its [`Validate`] method (. ./api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). See the examples of usage below.
 
 ## <a id="client"></a> Using CloudPurchaseClient
-Пример использования `CloudPurchaseClient` для валидации платежей:
+Example of using `CloudPurchaseClient` to validate payments:
 
 ``` c#
 public async Task Validate()
@@ -48,13 +48,13 @@ public async Task Validate()
 5. It means that purchase is good.
 
 
-## <a id="unity-iap"></a> Within the Unity IAP IStoreListener
+## <a id="unity-iap"></a> Unity IAP IStoreListener
 
-Для того, чтобы использовать `CloudPurchaseClient` вместе с **Unity IAP** сначала найдите файл `Assets/CME/Sample/Extensions.cs` в вашем проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.
+If you want to use 'CloudPurchaseClient' along with **Unity IAP**, first find the file `Assets/CME/Sample/Extensions.cs` in your project and uncomment it. It is required to use the appropriate extension methods.
 
-Подробнее про работу с **Unity IAP** можно найти в [официальной документации](https://docs.unity3d.com/Manual/UnityIAP.html).
+For more details on working with **Unity IAP**, see the [official userguide](https://docs.unity3d.com/Manual/UnityIAP.html).
 
-Пример использования `CloudPurchaseClient` c **Unity IAP** для валидации платежей:
+Here is an example of using 'CloudPurchaseClient' with **Unity IAP** to validate payments:
 
 ``` c#
 public class PurchaseProcessor : MonoBehaviour, IStoreListener
