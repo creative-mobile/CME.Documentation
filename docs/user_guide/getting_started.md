@@ -1,6 +1,6 @@
 # Getting Started with CME CloudPurchase
 
-Installing **CME CloudPurchase** is pretty straightforward and consists of the following steps:
+Installing **CME CloudPurchase** is pretty simple and consists of the following steps:
 
 1. Install the plug-in from the [Unity Asset Store](https://assetstore.unity.com/preview/224332/710152).
 2. Get the [AWS Credentials](#aws-credentials).
@@ -9,7 +9,7 @@ Installing **CME CloudPurchase** is pretty straightforward and consists of the f
 
 ## <a id="aws-credentials"></a> Get your AWS security credentials
 
-If you do not yet have an **AWS** account, we recommend following the instructions in the [official manual](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
+If you do not yet have an **AWS** account, we recommend following the instructions in the [official user guide](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
 
 If you already have an account, you can move on to getting the access keys.
 
