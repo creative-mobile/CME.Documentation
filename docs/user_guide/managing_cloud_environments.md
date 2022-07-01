@@ -1,8 +1,8 @@
 # Managing Cloud Environments
 
-Управление **AWS** окружением и его деплоем, а также настройка плагина осуществляются прямо из **Unity** при помощи окна **Control Panel**.
+The **AWS** environment, its deployment, and the plug-in settings are managed directly from **Unity** using the **Control Panel** window. 
 
-Чтобы открыть **Control Panel** нажмите `CME -> Cloud Purchase -> Show Control Panel`. После этого откроется окно **Control Panel**.
+To open **Control Panel**, press 'CME -> Cloud Purchase -> Show Control Panel'. The **Control Panel** window will then open.
 
 ![!](../assets/open-control-panel.gif)
 
@@ -12,11 +12,11 @@
 
 ### <a id="target-environment"></a> Target Environment
 
-Параметр `Target Environment` определяет, каким окружением управлять. Доступно два окружения: `testing` и `production`. 
+The 'Target Environment' parameter defines which environment to manage. Two environments are available: 'testing' and 'production'. 
 
-### <a id="deploy"></a> Deploy \ Update Deployment
+### <a id="deploy"></a> Deploy / Update Deployment
 
-Кнопка `Deploy \ Update Deployment` разворачивает выбранное окружение в AWS с текущими настройками или обновляет его, если оно уже было развернуто ранее.
+The 'Deploy / Update Deployment' button deploys the selected environment in AWS with the current settings or updates it if it has already been deployed.
 
 ## Inspection
 
@@ -24,12 +24,12 @@
 
 ### <a id="make-test-purchase"></a> Make Test Purchase
 
-Кнопка `Make Test Purchase` позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на [дашборде](#environment-dashboard).
+The 'Make Test Purchase' button allows you to make a test payment in the selected environment. The payment logs will be available in the console. The payment can also be seen on the [dashboard](#environment-dashboard).
 
 ### <a id="environment-dashboard"></a> Environment Dashboard
 
-Кнопка `Open Environment Dashboard` открывает в браузере дашборд в Amazon CloudWatch, на котором собрана информация о платежах на выбранном окружении.
-Подробнее о возможностях дашборда [здесь](usage_statistics.md).
+The 'Open Environment Dashboard' button opens a dashboard in Amazon CloudWatch containing information about payments in the selected environment. 
+You can read more about dashboard features [here](usage_statistics.md).
 
 ## Configuration
 
@@ -37,8 +37,8 @@
 
 ### <a id="edit-aws-profile"></a> Edit AWS Profile
 
-Кнопка `Edit AWS Profile` открывает `credentials` файл, где описываются credentials для **AWS** сервисов. 
-Пример того, как выглядят credentials описан ниже:
+The 'Edit AWS Profile' button opens the 'credentials' file, describing the credentials for **AWS** services. 
+Below is an example of what credentials look like:
 ```
 [cme-cloud-deploy]
 aws_access_key_id     = AKIAXXXX1XXXXXX1XX1X
@@ -46,14 +46,14 @@ aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
 region                = us-east-1
 ```
 
-Подробнее о том, что такое **AWS Security Credentials** можно узнать в [официальной документции](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html){target=_blank}, а то, как из получить прекрасно описано в разделе [Getting Started](getting_started.md).
+See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) to learn more about **AWS Security Credentials**. And the [Getting Started](getting_started.md) section will help you find out how to get them.
 
-### <a id="edit-google-credentials"></a> Set\Edit Google Credentials
-Кнопка `Set\Edit Google Credentials` открывает `GoogleCredentials.json` файл, где описываются credentials для **Google API**. Подробнее о том, как создать сервисный аккаунт Google и получить credentials узнать в [официальной документации](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
+### <a id="edit-google-credentials"></a> Set / Edit Google Credentials
+The 'Set / Edit Google Credentials' button opens the 'GoogleCredentials.json' file describing credentials for **Google API**. For more information on how to create a Google service account and get credentials, see the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account).
 
 ## Danger Zone
 
 ![!](../assets/control-panel-danger-zone.JPG){: style="height:547px;width:322px"}
 
 ### <a id="destroy-environment"></a> Destroy Environment
-По нажатию кнопки `Destroy Environment` выбранное окружение будет удалено **вместе со всеми сопутствующими данными**.
+Pressing the 'Destroy Environment' button will delete the selected environment **along with all related data**.
