@@ -1,16 +1,16 @@
 # Usage Statistics & Monitoring
 
-Базовый мониторинг платежей доступен с использованием возможностей AWS CloudWatch, а с помощью выгруженной в CSV истории можно проводить полнофункциональный анализ удобными вам инструментами.
+Basic payment monitoring is available through AWS CloudWatch, and you can use CSV uploaded history to perform full-featured analysis with the tools of your choice.
 
 ![!](../assets/dashboard-preview.jpg)
 
 ## <a id="dashboard"></a> Dashboard overview
 
-Для того, чтобы перейти к дашборду, нужно нажать кнопку `Open Environment Dashboard`. По умолчанию дашборд содержит разделы:
+To access the dashboard, press the 'Open Environment Dashboard' button. By default, the dashboard contains the following sections:
 
- * `Purchases Overview`. Показывает сумму платежей по дням. 
- * `Usage Overview`. График отражает количество успешных платежей и платежей с ошибкой.
- * `Purchase Details`. Здесь можно подробнее изучить информацию о каждом конкретном платеже.
+ * `Purchases Overview`. Shows the amount of payments by day.
+ * `Usage Overview`. The graph shows the number of successful payments and those with an error.
+ * `Purchase Details`. Here you can read more about each specific payment.
  * `Purchase Errors`. Детализация по ошибкам платежей.
 
  В правом верхнем углу находится элементы управления дашбордом. Здесь можно:
