@@ -6,11 +6,11 @@
 
 **CME CloudPurchase** is a **Unity** extension for server-side processing of in-game payments in your **AWS** cloud environment.
 
-Its key difference from similar systems is complete control and significant cost savings thanks to a **cutting-edge** approach to cloud deployment in **AWS**. Sounds intriguing yet complicated? We have prepared step-by-step [instructions](user_guide/getting_started.md) on creating and setting up a new account, and the process of deploying cloud infrastructure can be done from the Unity interface in just a couple of clicks.
+Its key difference from similar systems is complete control and significant cost savings thanks to a **cutting-edge** approach to cloud deployment in **AWS**. Sounds intriguing yet complicated? We have prepared step-by-step [guide](user_guide/getting_started.md) on creating and setting up a new account, and the process of deploying cloud infrastructure can be done from the Unity interface in just a couple of clicks.
 
-As a result, you get a server solution deployed in your own cloud, enjoy unlimited opportunities for functionality extension, and don't need to get a yet-another-weird subscription.
+As a result, you get a server solution deployed in your own cloud, enjoy unlimited opportunities for extended functionality, and don't need to get a yet-another-weird subscription.
 
-**Topics**
+**Sections**
 
 - [CME CloudPurchase features](#features)
 - [How CME CloudPurchase works](#how-it-works)
@@ -30,27 +30,27 @@ As a result, you get a server solution deployed in your own cloud, enjoy unlimit
 
 **CME CloudPurchase** currently supports the **Google Play Store** and **Apple App Store**.
 
-See the [Getting Started / Configure Stores Integrations](user_guide/getting_started.md#stores) section in the User Manual for more information on platform integration.
+See the [Getting Started / Configure Stores Integrations](user_guide/getting_started.md#stores) section in the User Guide for more information on platform integration.
 
 
 ### <a id="feature-2"></a> Test payment identification
 
 **CME CloudPurchase** helps to separate test payments and, if possible, repeat purchases for informed decision-making.
 
-See the [Making Validation Requests](user_guide/making_validation_requests.md) section in the Developer's Guide for more details on payment verification and operation mechanics.
+See the [Making Validation Requests](user_guide/making_validation_requests.md) section in the Developer Guide for more details on payment verification and operation mechanics.
 
 
 ### <a id="feature-3"></a> Tracking payment history
 
 Thanks to a unique system of logging and metrics in **Amazon CloudWatch**, **CME CloudPurchase** allows you to monitor payments in real time and upload the entire payment history for further analysis.
 
-See the [Usage Statistics and Monitoring](user_guide/usage_statistics.md) section in the User Manual for more information on cloud application usage statistics and monitoring.
+See the [Usage Statistics and Monitoring](user_guide/usage_statistics.md) section in the User Guide for more information on cloud application usage statistics and monitoring.
 
 ### <a id="feature-4"></a> Managing deployment environments
 
 **CME CloudPurchase** allows you to switch between the test and main operating environments directly from the **Unity Editor** to easily check your cloud application's configuration.
 
-See the [Managing Cloud Environments](user_guide/managing_cloud_environments.md) section of the Developer's Guide for more information on cloud deployment.
+See the [Managing Cloud Environments](user_guide/managing_cloud_environments.md) section of the Developer Guide for more information on cloud deployment.
 
 ### <a id="feature-5"></a> Extension and modification
 
