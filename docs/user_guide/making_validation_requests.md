@@ -2,7 +2,7 @@
 
 When installing **CME CloudPurchase**, you will find the file 'Assets/CME/Sample/CloudPurchaseSample.cs' in your Unity project containing examples of how to use 'CloudPurchaseClient'.
 
-The payment verification process with **CME CloudPurchase** is pretty simple. Basically it is all about creating an instance [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) and using its [`Validate`] method (. ./api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). See the examples of usage below.
+The payment verification process with **CME CloudPurchase** is pretty straightforward. Basically it is all about creating an instance [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) and using its [`Validate`] method (. ./api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). See the examples of usage below.
 
 ## <a id="client"></a> Using CloudPurchaseClient
 Example of using 'CloudPurchaseClient' to validate payments:
@@ -149,4 +149,4 @@ public class PurchaseProcessor : MonoBehaviour, IStoreListener
 3. Finally confirm the purchase.
 4. Use extension method to create ValidationRequest from GooglePlayReceipt.
 5. Use extension method to create ValidationRequest from Product.
-6. Don't need to await this call because we set purchase state to `Pending` below.
+6. Don't need to await this call because we set purchase state to 'Pending' below.
