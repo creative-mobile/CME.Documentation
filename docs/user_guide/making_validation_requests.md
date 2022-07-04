@@ -45,7 +45,7 @@ public async Task Validate()
 2. Create validation request directly.
 3. Set 'UserId' to study the logs and solve potential user problems. **Warning:** This is personal data, for more information see [here](usage_statistics.md#sensetive-data).
 4. Set `PriceUsdCents` for analytics and revenue diagrams in the [dashboard](usage_statistics.md).
-5. It means that the purchase is good.
+5. It means that the purchase has been completed successfully.
 
 
 ## <a id="unity-iap"></a> Unity IAP IStoreListener
@@ -144,9 +144,9 @@ public class PurchaseProcessor : MonoBehaviour, IStoreListener
 }
 ```
 
-1. Still waiting for the purchase validation. Confirmation will be after validation.
-2. It means that purchase is good.
+1. Still waiting for the purchase validation. Confirmation will come after validation.
+2. It means that the purchase has been completed successfully.
 3. Finally confirm the purchase.
 4. Use extension method to create ValidationRequest from GooglePlayReceipt.
 5. Use extension method to create ValidationRequest from Product.
-6. Don't need to await this call because we set purchase state to 'Pending' below.
+6. No need to wait for this request to be completed because we bring back the 'Pending' status of the purchase below.
