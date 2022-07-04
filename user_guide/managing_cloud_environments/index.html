@@ -374,7 +374,7 @@
         
           <li class="md-nav__item">
   <a href="#deploy-update-deployment" class="md-nav__link">
-     Deploy \ Update Deployment
+     Deploy / Update Deployment
   </a>
   
 </li>
@@ -427,8 +427,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setedit-google-credentials" class="md-nav__link">
-     Set\Edit Google Credentials
+  <a href="#set-edit-google-credentials" class="md-nav__link">
+     Set / Edit Google Credentials
   </a>
   
 </li>
@@ -662,7 +662,7 @@
         
           <li class="md-nav__item">
   <a href="#deploy-update-deployment" class="md-nav__link">
-     Deploy \ Update Deployment
+     Deploy / Update Deployment
   </a>
   
 </li>
@@ -715,8 +715,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setedit-google-credentials" class="md-nav__link">
-     Set\Edit Google Credentials
+  <a href="#set-edit-google-credentials" class="md-nav__link">
+     Set / Edit Google Credentials
   </a>
   
 </li>
@@ -765,39 +765,39 @@
 
 
 <h1 id="managing-cloud-environments">Managing Cloud Environments</h1>
-<p>Управление <strong>AWS</strong> окружением и его деплоем, а также настройка плагина осуществляются прямо из <strong>Unity</strong> при помощи окна <strong>Control Panel</strong>.</p>
-<p>Чтобы открыть <strong>Control Panel</strong> нажмите <code>CME -&gt; Cloud Purchase -&gt; Show Control Panel</code>. После этого откроется окно <strong>Control Panel</strong>.</p>
+<p>The <strong>AWS</strong> environment, its deployment, and the plug-in settings are managed directly from <strong>Unity</strong> using the <strong>Control Panel</strong> window. </p>
+<p>To open <strong>Control Panel</strong>, press 'CME -&gt; Cloud Purchase -&gt; Show Control Panel'. The <strong>Control Panel</strong> window will then open.</p>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/open-control-panel.gif"><img alt="" src="../../assets/open-control-panel.gif" /></a></div></p>
 <h2 id="control-panel-overview"><a id="control-panel"></a> Control Panel Overview</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-overview.JPG"><img alt="" src="../../assets/control-panel-overview.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="target-environment"><a id="target-environment"></a> Target Environment</h3>
-<p>Параметр <code>Target Environment</code> определяет, каким окружением управлять. Доступно два окружения: <code>testing</code> и <code>production</code>. </p>
-<h3 id="deploy-update-deployment"><a id="deploy"></a> Deploy \ Update Deployment</h3>
-<p>Кнопка <code>Deploy \ Update Deployment</code> разворачивает выбранное окружение в AWS с текущими настройками или обновляет его, если оно уже было развернуто ранее.</p>
+<p>The 'Target Environment' parameter defines which environment to manage. Two environments are available: 'testing' and 'production'. </p>
+<h3 id="deploy-update-deployment"><a id="deploy"></a> Deploy / Update Deployment</h3>
+<p>The 'Deploy / Update Deployment' button deploys the selected environment in AWS with the current settings or updates it if it has already been deployed.</p>
 <h2 id="inspection">Inspection</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-inspection.JPG"><img alt="" src="../../assets/control-panel-inspection.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="make-test-purchase"><a id="make-test-purchase"></a> Make Test Purchase</h3>
-<p>Кнопка <code>Make Test Purchase</code> позволяет сделать тестовый платеж в выбранном окружении. Логи платежа будут доступны в консоли. Также платеж можно будет увидеть на <a href="#environment-dashboard">дашборде</a>.</p>
+<p>The 'Make Test Purchase' button allows you to make a test payment in the selected environment. The payment logs will be available in the console. The payment can also be seen on the <a href="#environment-dashboard">dashboard</a>.</p>
 <h3 id="environment-dashboard"><a id="environment-dashboard"></a> Environment Dashboard</h3>
-<p>Кнопка <code>Open Environment Dashboard</code> открывает в браузере дашборд в Amazon CloudWatch, на котором собрана информация о платежах на выбранном окружении.
-Подробнее о возможностях дашборда <a href="../usage_statistics/">здесь</a>.</p>
+<p>The 'Open Environment Dashboard' button opens a dashboard in Amazon CloudWatch containing information about payments in the selected environment. 
+You can read more about dashboard features <a href="../usage_statistics/">here</a>.</p>
 <h2 id="configuration">Configuration</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-configuration.JPG"><img alt="" src="../../assets/control-panel-configuration.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="edit-aws-profile"><a id="edit-aws-profile"></a> Edit AWS Profile</h3>
-<p>Кнопка <code>Edit AWS Profile</code> открывает <code>credentials</code> файл, где описываются credentials для <strong>AWS</strong> сервисов. 
-Пример того, как выглядят credentials описан ниже:
+<p>The 'Edit AWS Profile' button opens the 'credentials' file, describing the credentials for <strong>AWS</strong> services. 
+Below is an example of what credentials look like:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[cme-cloud-deploy]
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>aws_access_key_id     = AKIAXXXX1XXXXXX1XX1X
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>region                = us-east-1
 </code></pre></div></p>
-<p>Подробнее о том, что такое <strong>AWS Security Credentials</strong> можно узнать в <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html" target="_blank">официальной документции</a>, а то, как из получить прекрасно описано в разделе <a href="../getting_started/">Getting Started</a>.</p>
-<h3 id="setedit-google-credentials"><a id="edit-google-credentials"></a> Set\Edit Google Credentials</h3>
-<p>Кнопка <code>Set\Edit Google Credentials</code> открывает <code>GoogleCredentials.json</code> файл, где описываются credentials для <strong>Google API</strong>. Подробнее о том, как создать сервисный аккаунт Google и получить credentials узнать в <a href="https://developers.google.com/workspace/guides/create-credentials#service-account" target="_blank">официальной документации</a>.</p>
+<p>See the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html">official userguide</a> to learn more about <strong>AWS Security Credentials</strong>. And the <a href="../getting_started/">Getting Started</a> section will help you find out how to get them.</p>
+<h3 id="set-edit-google-credentials"><a id="edit-google-credentials"></a> Set / Edit Google Credentials</h3>
+<p>The 'Set / Edit Google Credentials' button opens the 'GoogleCredentials.json' file describing credentials for <strong>Google API</strong>. For more information on how to create a Google service account and get credentials, see the <a href="https://developers.google.com/workspace/guides/create-credentials#service-account">official userguide</a>.</p>
 <h2 id="danger-zone">Danger Zone</h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../assets/control-panel-danger-zone.JPG"><img alt="" src="../../assets/control-panel-danger-zone.JPG" style="height:547px;width:322px" /></a></div></p>
 <h3 id="destroy-environment"><a id="destroy-environment"></a> Destroy Environment</h3>
-<p>По нажатию кнопки <code>Destroy Environment</code> выбранное окружение будет удалено <strong>вместе со всеми сопутствующими данными</strong>.</p>
+<p>Pressing the 'Destroy Environment' button will delete the selected environment <strong>along with all related data</strong>.</p>
 
               
             </article>
@@ -880,7 +880,7 @@
   
     
     
-    <a href="https://discord.gg/BUefC7x3" target="_blank" rel="noopener" title="CME on Discord" class="md-social__link">
+    <a href="https://discord.gg/vCRWDQJM" target="_blank" rel="noopener" title="CME on Discord" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
     </a>
   
