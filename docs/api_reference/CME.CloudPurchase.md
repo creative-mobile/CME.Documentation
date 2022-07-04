@@ -1,7 +1,7 @@
 <a name='assembly'></a>
 # Namespace CME.CloudPurchase
 
-## Top level entities
+## Top-level entities
 
 - [CloudPurchaseClient](#T-CME-CloudPurchase-CloudPurchaseClient 'CME.CloudPurchase.CloudPurchaseClient')
 
