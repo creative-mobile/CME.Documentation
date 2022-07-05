@@ -1,11 +1,11 @@
 # Making Validation Requests
 
-При установке **CME CloudPurchase** в вашем Unity проекте появится файл `Assets/CME/Sample/CloudPurchaseSample.cs` в котором есть примеры использования `CloudPurchaseClient`.
+When installing **CME CloudPurchase**, you will find the file 'Assets/CME/Sample/CloudPurchaseSample.cs' in your Unity project containing examples of how to use 'CloudPurchaseClient'.
 
-Процесс проверки платежей с помощью **CME CloudPurchase** довольно прост. По-сути, все сводится к созданию инстанса [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) и использованию его метода [`Validate`](../api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). Примеры использования можно видеть ниже.
+The payment verification process with **CME CloudPurchase** is pretty straightforward. Basically it is all about creating an instance [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) and using its [`Validate`] method (. ./api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). See the examples of usage below.
 
 ## <a id="client"></a> Using CloudPurchaseClient
-Пример использования `CloudPurchaseClient` для валидации платежей:
+Example of using 'CloudPurchaseClient' to validate payments:
 
 ``` c#
 public async Task Validate()
@@ -41,20 +41,20 @@ public async Task Validate()
 }
 ```
 
-1. Create `CloudPurchaseClient` instance for validation
-2. Create validation request directly
-3. Set `UserId` to investigate logs and solve possible user problems. **Warning:** this is personal data, see details [here](usage_statistics.md#sensetive-data).
-4. Set `PriceUsdCents` for analytics and revenue diagrams in [dashboard](usage_statistics.md).
-5. It means that purchase is good.
+1. Create 'CloudPurchaseClient' instance for validation.
+2. Create validation request directly.
+3. Set 'UserId' to study the logs and solve potential user problems. **Warning:** This is personal data, for more information see [here](usage_statistics.md#sensetive-data).
+4. Set `PriceUsdCents` for analytics and revenue diagrams in the [dashboard](usage_statistics.md).
+5. It means that the purchase has been completed successfully.
 
 
-## <a id="unity-iap"></a> Within the Unity IAP IStoreListener
+## <a id="unity-iap"></a> Unity IAP IStoreListener
 
-Для того, чтобы использовать `CloudPurchaseClient` вместе с **Unity IAP** сначала найдите файл `Assets/CME/Sample/Extensions.cs` в вашем проекте и раскомментировать его. Это нужно для того, чтобы использовать соответствующие extension методы.
+If you want to use 'CloudPurchaseClient' along with **Unity IAP**, first find the file 'Assets/CME/Sample/Extensions.cs' in your project and uncomment it. It is required to use the appropriate extension methods.
 
-Подробнее про работу с **Unity IAP** можно найти в [официальной документации](https://docs.unity3d.com/Manual/UnityIAP.html).
+For more details on working with **Unity IAP**, see the [official userguide](https://docs.unity3d.com/Manual/UnityIAP.html).
 
-Пример использования `CloudPurchaseClient` c **Unity IAP** для валидации платежей:
+Here is an example of using 'CloudPurchaseClient' with **Unity IAP** to validate payments:
 
 ``` c#
 public class PurchaseProcessor : MonoBehaviour, IStoreListener
@@ -144,9 +144,9 @@ public class PurchaseProcessor : MonoBehaviour, IStoreListener
 }
 ```
 
-1. Still waiting for the purchase validation. Confirmation will be after validation.
-2. It means that purchase is good.
+1. Still waiting for the purchase validation. Confirmation will come after validation.
+2. It means that the purchase has been completed successfully.
 3. Finally confirm the purchase.
 4. Use extension method to create ValidationRequest from GooglePlayReceipt.
 5. Use extension method to create ValidationRequest from Product.
-6. Don't need to await this call because we set purchase state to `Pending` below.
+6. No need to wait for this request to be completed because we bring back the 'Pending' status of the purchase below.

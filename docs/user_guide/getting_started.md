@@ -1,21 +1,21 @@
 # Getting Started with CME CloudPurchase
 
-Установка **CME CloudPurchase** довольно проста и состоит из следующих шагов:
+Installing **CME CloudPurchase** is pretty simple and consists of the following steps:
 
-1. Установить плагин из [Unity Asset Store](https://assetstore.unity.com/preview/224332/710152).
-2. Получить [AWS Credentials](#aws-credentials).
-3. Выполнить [первый деплой](#deployment).
-4. Сконфигурировать [ключи доступа](#stores) к Google Developer Console.
+1. Install the plug-in from the [Unity Asset Store](https://assetstore.unity.com/preview/224332/710152).
+2. Get the [AWS Credentials](#aws-credentials).
+3. Make the [first deployment](#deployment).
+4. Configure [access keys](#stores) to the Google Developer Console.
 
 ## <a id="aws-credentials"></a> Get your AWS security credentials
 
-Если у вас еще нету аккаунта в **AWS**, то рекомендуем выполнить шаги [официального руководства](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/){target=_blank}.
+If you do not yet have an **AWS** account, we recommend following the instructions in the [official user guide](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
 
-В случае, если аккаунт уже есть то можно переходить к получению ключей доступа.
+If you already have an account, you can move on to getting the access keys.
 
 ### Generating security credentials
 
-Для получения ключей доступа перейите в раздел [Identity and Access Management | Your Security Credentials](hhttps://us-east-1.console.aws.amazon.com/iam/home#/security_credentials){target=_blank} и получите ключ доступа, выполнив следующие действия:
+For access keys, go to [Identity and Access Management | Your Security Credentials](hhttps://us-east-1.console.aws.amazon.com/iam/home#/security_credentials) and get an access key by following the steps below:
 
 ![!](../assets/get_aws_creds.gif)
 
@@ -23,27 +23,27 @@
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Без конфигурации <a href="#stores">ключей доступа</a> к <b>Google Developer Console</b> нет возможности проверять патежи в <b>Google Play Store</b>, поэтому проверка может выдавать ошибку:</p>
+Payments in the <b>Google Play Store</b> cannot be verified without the configuration of <b>Google Developer Console</b> <a href="#stores">access keys</a>. Therefore, the verification may display an error:</p>
 <img src="../assets/google-creds-error.jpg">
 </div>
 
-Теперь вы готовы развернуть свое первое **CME CloudPurchase** приложение, для этого откройте **Unity Editor** с установленным плагинов и нажмите на кнопку **Deploy**:
+You are now ready to deploy your first **CME CloudPurchase** application. To do this, open the **Unity Editor** with the plug-in installed and click the **Deploy** button:
 
 ![](../assets/first deploy.gif)
 
-Вероятнее всего, вам прийдется установить сгенерированные ключи доступа AWS в открывшийся файл `.aws/credentials` в вашей домашней директории. Подробнее про него можно прочитать в [официальной документации](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
+You will most likely have to install the generated AWS access keys into the opened '.aws/credentials' file in your home directory. See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) for more details. 
 
-## <a id="stores"></a> Configure stores integrations
+## <a id="stores"></a> Configuring stores integrations
 
-Для получения ключей доступа к **Google Developer Console** необходимо перейти в [Google Play Console](https://play.google.com/console/){target=_blank} и выполните следующие действия:
+For access keys to **Google Developer Console**, go to [Google Play Console](https://play.google.com/console/) and follow the steps below: 
 
-1. Создайте сервисный аккаунт.
+1. Set up a service account.
 ![!](../assets/google_1.gif)
 
-2. Создайте новый приватный ключ.
+2. Generate a new private key.
 ![!](../assets/google_2.gif)
 
-3. Выдайте необходимые разрешения для аккаунта.
+3. Set up the necessary permissions for the account.
 ![!](../assets/google_3.gif)
 
-Подробнее о процессе создания и настройки сервисного аккаунта можно узнать [в официальной документации](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
+See the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account) for more information on the process of creating and setting up a service account.
