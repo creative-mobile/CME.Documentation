@@ -8,8 +8,10 @@
 
 ## <a id="control-panel"></a> Control Panel Overview
 
-![!](../assets/control-panel-overview.JPG){: style="height:547px;width:322px"}
-
+<figure markdown>
+![!](../assets/control-panel-overview.JPG){: style="height:547px;width:322px;align:centre"}
+  <figcaption> </figcaption>
+</figure>
 ### <a id="target-environment"></a> Target Environment
 
 Параметр `Target Environment` определяет, каким окружением управлять. Доступно два окружения: `testing` и `production`. 
@@ -20,7 +22,10 @@
 
 ## Inspection
 
+<figure markdown>
 ![!](../assets/control-panel-inspection.JPG){: style="height:547px;width:322px"}
+  <figcaption></figcaption>
+</figure>
 
 ### <a id="make-test-purchase"></a> Make Test Purchase
 
@@ -33,7 +38,10 @@
 
 ## Configuration
 
+<figure markdown>
 ![!](../assets/control-panel-configuration.JPG){: style="height:547px;width:322px"}
+ <figcaption></figcaption>
+</figure>
 
 ### <a id="edit-aws-profile"></a> Edit AWS Profile
 
@@ -53,7 +61,10 @@ region                = us-east-1
 
 ## Danger Zone
 
+<figure markdown>
 ![!](../assets/control-panel-danger-zone.JPG){: style="height:547px;width:322px"}
+ <figcaption></figcaption>
+</figure>
 
 ### <a id="destroy-environment"></a> Destroy Environment
 По нажатию кнопки `Destroy Environment` выбранное окружение будет удалено **вместе со всеми сопутствующими данными**.
