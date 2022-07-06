@@ -4,12 +4,12 @@ The **AWS** environment, its deployment, and the plug-in settings are managed di
 
 To open **Control Panel**, press 'CME -> Cloud Purchase -> Show Control Panel'. The **Control Panel** window will then open.
 
-![!](../assets/open-control-panel.gif)
+![!](../assets/open_panel.gif)
 
 ## <a id="control-panel"></a> Control Panel Overview
 
 <figure markdown>
-![!](../assets/control-panel-overview.JPG){: style="height:547px;width:322px;align:centre"}
+![!](../assets/panel.JPG)
   <figcaption> </figcaption>
 </figure>
 ### <a id="target-environment"></a> Target Environment
@@ -23,7 +23,7 @@ The 'Deploy / Update Deployment' button deploys the selected environment in AWS 
 ## Inspection
 
 <figure markdown>
-![!](../assets/control-panel-inspection.JPG){: style="height:547px;width:322px"}
+![!](../assets/control-panel-inspection.JPG)
   <figcaption></figcaption>
 </figure>
 
@@ -39,7 +39,7 @@ You can read more about dashboard features [here](usage_statistics.md).
 ## Configuration
 
 <figure markdown>
-![!](../assets/control-panel-configuration.JPG){: style="height:547px;width:322px"}
+![!](../assets/control-panel-configuration.JPG)
  <figcaption></figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ The 'Set / Edit Google Credentials' button opens the 'GoogleCredentials.json' fi
 ## Danger Zone
 
 <figure markdown>
-![!](../assets/control-panel-danger-zone.JPG){: style="height:547px;width:322px"}
+![!](../assets/control-panel-danger-zone.JPG)
  <figcaption></figcaption>
 </figure>
 

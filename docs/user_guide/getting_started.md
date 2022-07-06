@@ -17,19 +17,20 @@ If you already have an account, you can move on to getting the access keys.
 
 For access keys, go to [Identity and Access Management | Your Security Credentials](hhttps://us-east-1.console.aws.amazon.com/iam/home#/security_credentials) and get an access key by following the steps below:
 
-![!](../assets/get_aws_creds.gif)
+![!](../assets/aws_credentials.gif)
 
 ## <a id="deployment"></a> Make your first deployment
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 Payments in the <b>Google Play Store</b> cannot be verified without the configuration of <b>Google Developer Console</b> <a href="#stores">access keys</a>. Therefore, the verification may display an error:</p>
-<img src="../assets/google-creds-error.jpg">
 </div>
+
+![](../assets/google-creds-error.jpg)
 
 You are now ready to deploy your first **CME CloudPurchase** application. To do this, open the **Unity Editor** with the plug-in installed and click the **Deploy** button:
 
-![](../assets/first deploy.gif)
+![](../assets/deploy.gif)
 
 You will most likely have to install the generated AWS access keys into the opened '.aws/credentials' file in your home directory. See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) for more details. 
 
@@ -38,12 +39,12 @@ You will most likely have to install the generated AWS access keys into the open
 For access keys to **Google Developer Console**, go to [Google Play Console](https://play.google.com/console/) and follow the steps below: 
 
 1. Set up a service account.
-![!](../assets/google_1.gif)
+![!](../assets/google_create.gif)
 
 2. Generate a new private key.
-![!](../assets/google_2.gif)
+![!](../assets/google_create_keys.gif)
 
 3. Set up the necessary permissions for the account.
-![!](../assets/google_3.gif)
+![!](../assets/google_permisions.gif)
 
 See the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account) for more information on the process of creating and setting up a service account.
