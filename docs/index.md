@@ -86,8 +86,8 @@ The application is divided into named environments to enable secure testing of c
 
 ## <a id="pricing"></a> CME CloudPurchase pricing
 
-**CME CloudPurchase** uses **AWS** resources very efficiently and is [fully compliant](https://calculator.aws/#/estimate?id=173c99261f287852c34cb50214c1fe6c34f4e14b) with the **AWS Free Tier** terms of use.
+**CME CloudPurchase** uses **AWS** resources very efficiently and is [fully compliant](https://calculator.aws/#/estimate?id=173c99261f287852c34cb50214c1fe6c34f4e14b){target=_blank} with the **AWS Free Tier** terms of use.
 
-That is why the [trial version](https://assetstore.unity.com/preview/224130/709634) of **CME CloudPurchase** will be completely free for you.
+That is why the [trial version](https://assetstore.unity.com/preview/224130/709634){target=_blank} of **CME CloudPurchase** will be completely free for you.
 
-Should it be impossible to use **AWS Free Tier**, the operating cost [is still highly competitive](https://calculator.aws/#/estimate?id=4146e963f41967449d736e1a9b1d80cadda074a1).
+Should it be impossible to use **AWS Free Tier**, the operating cost [is still highly competitive](https://calculator.aws/#/estimate?id=4146e963f41967449d736e1a9b1d80cadda074a1){target=_blank}.

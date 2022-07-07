@@ -52,7 +52,7 @@ public async Task Validate()
 
 If you want to use 'CloudPurchaseClient' along with **Unity IAP**, first find the file 'Assets/CME/Sample/Extensions.cs' in your project and uncomment it. It is required to use the appropriate extension methods.
 
-For more details on working with **Unity IAP**, see the [official userguide](https://docs.unity3d.com/Manual/UnityIAP.html).
+For more details on working with **Unity IAP**, see the [official userguide](https://docs.unity3d.com/Manual/UnityIAP.html){target=_blank}.
 
 Here is an example of using 'CloudPurchaseClient' with **Unity IAP** to validate payments:
 

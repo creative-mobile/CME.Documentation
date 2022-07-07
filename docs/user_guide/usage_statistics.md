@@ -19,7 +19,7 @@ To access the dashboard, press the 'Open Environment Dashboard' button. By defau
 * Change the data update interval.
 * Add widgets to dashboard, change its name, delete it, etc.
 
-For more details on working with dashboards in CloudWatch, see the [official userguide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html).
+For more details on working with dashboards in CloudWatch, see the [official userguide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html){target=_blank}.
 
 ## <a id="sensetive-data"></a> Sensetive data 
 

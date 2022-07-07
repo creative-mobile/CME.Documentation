@@ -54,10 +54,10 @@ aws_secret_access_key = XtxJ11cL0r3211mKEKnmgWKVvjZFqtLOpZZiXxyz
 region                = us-east-1
 ```
 
-See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) to learn more about **AWS Security Credentials**. And the [Getting Started](getting_started.md) section will help you find out how to get them.
+See the [official userguide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html){target=_blank} to learn more about **AWS Security Credentials**. And the [Getting Started](getting_started.md) section will help you find out how to get them.
 
 ### <a id="edit-google-credentials"></a> Set / Edit Google Credentials
-The 'Set / Edit Google Credentials' button opens the 'GoogleCredentials.json' file describing credentials for **Google API**. For more information on how to create a Google service account and get credentials, see the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account).
+The 'Set / Edit Google Credentials' button opens the 'GoogleCredentials.json' file describing credentials for **Google API**. For more information on how to create a Google service account and get credentials, see the [official userguide](https://developers.google.com/workspace/guides/create-credentials#service-account){target=_blank}.
 
 ## Danger Zone
 
