@@ -30,7 +30,7 @@ theme:
     primary: white
     accent: light green
   logo: assets/CM_Elements_Logotype_full.svg
-  favicon: assets/CM_Elements_Logotype.svg
+  favicon: assets/CM_Elements_Favicon.svg
   
 extra:
   social:
