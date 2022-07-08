@@ -34,6 +34,9 @@ theme:
   
 extra:
   social:
+    - icon: fontawesome/solid/house-chimney
+      link: https://cme.dev
+      name: CME
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/CM_Elements
       name: CME on Twitter
@@ -46,6 +49,7 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCmVqOVnAbXFNFRKTvihcrgg
       name: CME on Youtube
+    
     
 extra_css:
   - stylesheets/style.css

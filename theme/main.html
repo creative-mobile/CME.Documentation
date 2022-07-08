@@ -22,17 +22,17 @@
 
 
     let header = document.querySelector("body > header > nav");
-    header.removeChild(document.querySelector("body > header > nav > div.md-header__source"))
+    header.removeChild(document.querySelector("body > header > nav > div.md-header__source"));
 
-    let tryDiv = document.createElement("div")
-    tryDiv.setAttribute("style", "padding: 0.2rem")
+    let tryDiv = document.createElement("div");
+    tryDiv.setAttribute("style", "padding: 0.2rem");
 
     let tryButton = document.createElement('a');
     tryButton.setAttribute("class", "button");
-    tryButton.setAttribute("href", "https://assetstore.unity.com/preview/224130/709634");
-    tryButton.text = "Try Now"
+    tryButton.setAttribute("href", "https://assetstore.unity.com/packages/slug/224130");
+    tryButton.text = "Try Now";
 
-    tryDiv.appendChild(tryButton)
+    tryDiv.appendChild(tryButton);
     header.appendChild(tryDiv);
 </script>
 {% endblock scripts %}
