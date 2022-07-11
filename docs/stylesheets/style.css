@@ -23,8 +23,8 @@
 }
 
 .button:hover {
-    background-color: var(--md-primary-bg-color);
-    color: var(--md-accent-bg-color);
+    color: black;
+    transition: 500ms;
 }
 
 :root > * {
