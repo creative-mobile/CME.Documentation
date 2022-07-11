@@ -2,7 +2,8 @@
 
 When installing **CME CloudPurchase**, you will find the file 'Assets/CME/Sample/CloudPurchaseSample.cs' in your Unity project containing examples of how to use 'CloudPurchaseClient'.
 
-The payment verification process with **CME CloudPurchase** is pretty straightforward. Basically it is all about creating an instance [`CloudPurchaseClient`](../api_reference/API.md#T-CME-CloudPurchase-CloudPurchaseClient) and using its [`Validate`] method (. ./api_reference/API.md#M-CME-CloudPurchase-CloudPurchaseClient-Validate-CME-CloudPurchase-ValidationRequest,System-Action{System-String}-). See the examples of usage below.
+The payment verification process with **CME CloudPurchase** is pretty straightforward. Basically it is all about creating an instance [`CloudPurchaseClient`](../api_reference/CME.CloudPurchase.md#T-CME-CloudPurchase-CloudPurchaseClient) and using its [`Validate`](../api_reference/CME.CloudPurchase.md#Validate) method . See the examples of usage below.
+method . See the examples of usage below.
 
 ## <a id="client"></a> Using CloudPurchaseClient
 Example of using 'CloudPurchaseClient' to validate payments:
