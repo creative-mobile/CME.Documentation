@@ -9,6 +9,7 @@ nav:
   - "User Guide":
     - "What is CME CloudPurchase?": index.md
     - "Getting Started": user_guide/getting_started.md
+    - "AWS Policy settings": user_guide/aws_policies.md
     - "Managing Cloud Environments": user_guide/managing_cloud_environments.md
     - "Usage Statistics & Monitoring": user_guide/usage_statistics.md
     - "Developer Guide":
