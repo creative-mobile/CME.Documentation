@@ -79,7 +79,7 @@ If a user WITHOUT admin rights wants to perform a deployment, they need to add t
 }
 ```
 
-#### CDKDeployPolicy – policy for CME stack deployment
+#### CDKDeployPolicy – policy for CME stack deployment.
 
 ```json
 {
