@@ -1,8 +1,8 @@
-# Необходимые полиси AWS (optional)
+# Required AWS Policies (optional)
 
-Если для деплоя используется пользователь БЕЗ админских прав, то ему нужно добавить следующие полиси:
+If a user WITHOUT admin rights wants to perform a deployment, they need to add the following policies:
 
-#### CDKBootstrapPolicy - policy для [бутстрапа](https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping.html) региона
+#### CDKBootstrapPolicy – policy for region [bootstrapping] (https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping.html).
 
 ```json
 {
@@ -79,7 +79,7 @@
 }
 ```
 
-#### CDKDeployPolicy - policy для деплоя стэка CME
+#### CDKDeployPolicy – policy for CME stack deployment
 
 ```json
 {
